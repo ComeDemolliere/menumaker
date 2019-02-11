@@ -13,6 +13,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource(Menumaker.XML_FILE));
+        root.getStylesheets().add(Menumaker.CSS);
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, Menumaker.WIDTH, Menumaker.HEIGHT));
         primaryStage.show();
