@@ -8,4 +8,8 @@ public class Controller {
         this.router = router;
     }
 
+    void init(){
+        //Add something...
+    }
+
 }
