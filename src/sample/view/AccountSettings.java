@@ -1,11 +1,11 @@
 package sample.view;
 
 public class AccountSettings {
-    public final String XML_FILE = "../ressources/AccountSettings.fxml";
+    public static final String XML_FILE = "../ressources/AccountSettings.fxml";
 
-    public final String LABEL = "SETTINGS";
+    public static final String LABEL = "SETTINGS";
 
-    public final int WIDTH = 1920;
+    public static final int WIDTH = 1920;
 
-    public final int HEIGHT = 1080;
+    public static final int HEIGHT = 1080;
 }

@@ -1,11 +1,11 @@
 package sample.view;
 
 public class AddGuest {
-    public final String XML_FILE = "../ressources/AddGuest.fxml";
+    public static final String XML_FILE = "../ressources/AddGuest.fxml";
 
-    public final String LABEL = "ADDGUEST";
+    public static final String LABEL = "ADDGUEST";
 
-    public final int WIDTH = 1920;
+    public static final int WIDTH = 1920;
 
-    public final int HEIGHT = 1080;
+    public static final int HEIGHT = 1080;
 }
