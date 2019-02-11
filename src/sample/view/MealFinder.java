@@ -1,7 +1,7 @@
 package sample.view;
 
 public class MealFinder {
-    public static final String XML_FILE = "../ressources/MealFinder.fxml";
+    public static final String XML_FILE = "ressources/MealFinder.fxml";
 
     public static final String LABEL = "MEALFINDER";
 

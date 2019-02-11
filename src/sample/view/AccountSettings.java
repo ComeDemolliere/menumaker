@@ -1,7 +1,7 @@
 package sample.view;
 
 public class AccountSettings {
-    public static final String XML_FILE = "../ressources/AccountSettings.fxml";
+    public static final String XML_FILE = "ressources/AccountSettings.fxml";
 
     public static final String LABEL = "SETTINGS";
 
