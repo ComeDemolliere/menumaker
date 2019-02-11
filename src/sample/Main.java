@@ -1,21 +1,18 @@
 package sample;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-import sample.view.*;
+import sample.view.AccountSettings;
 
 
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource(Menumaker.XML_FILE));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, Menumaker.WIDTH, Menumaker.HEIGHT));
-        primaryStage.show();
+    public void start(Stage primaryStage) throws Exception {
+        Router router = new Router(primaryStage);
+        router.addRoute("test", new Controller(), new AccountSettings());
+
+        router.change("test");
     }
 
 

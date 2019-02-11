@@ -1,11 +1,8 @@
 package sample.view;
 
-abstract class View {
-    public static String XML_FILE;
-
-    public static  String LABEL;
-
-    public static  int WIDTH;
-
-    public static  int HEIGHT;
+public abstract class View {
+    public abstract String getXML_FILE();
+    public abstract String getLABEL();
+    public abstract int getWIDTH();
+    public abstract int getHEIGHT();
 }

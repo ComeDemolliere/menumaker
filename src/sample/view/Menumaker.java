@@ -1,11 +1,27 @@
 package sample.view;
 
-public class Menumaker extends View{
-    public static final String XML_FILE = "ressources/MenuMaker.fxml";
+public class Menumaker extends View {
+    private final String XML_FILE = "ressources/MenuMaker.fxml";
 
-    public static final String LABEL = "MENUMAKER";
+    private final String LABEL = "MENUMAKER";
 
-    public static final int WIDTH = 1920;
+    private final int WIDTH = 1920;
 
-    public static final int HEIGHT = 1080;
+    public String getXML_FILE() {
+        return XML_FILE;
+    }
+
+    public String getLABEL() {
+        return LABEL;
+    }
+
+    public int getWIDTH() {
+        return WIDTH;
+    }
+
+    public int getHEIGHT() {
+        return HEIGHT;
+    }
+
+    private final int HEIGHT = 1080;
 }
