@@ -3,6 +3,7 @@ package sample;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import sample.view.AccountSettings;
+import sample.view.Fridge;
 
 
 public class Main extends Application {
@@ -10,9 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Router router = new Router(primaryStage);
-        router.addRoute("test", new Controller(), new AccountSettings());
-
-        router.change("test");
+        router.init();
     }
 
 
