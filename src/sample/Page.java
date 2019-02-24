@@ -1,4 +1,4 @@
-package sample.view;
+package sample;
 
 public enum Page {
     MENUMAKER,

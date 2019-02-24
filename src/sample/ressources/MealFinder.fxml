@@ -19,7 +19,7 @@
          <children>
             <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                <image>
-                  <Image url="@pictures/user.png" />
+                  <Image url="sample/ressources/pictures/user.png" />
                </image>
                <viewport>
                   <Rectangle2D width="3.0" />
@@ -28,9 +28,9 @@
                   <Insets right="20.0" />
                </HBox.margin>
             </ImageView>
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" text="MON FRIGO" HBox.hgrow="ALWAYS" />
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="MENUMAKER" HBox.hgrow="ALWAYS" />
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="PLATS" HBox.hgrow="ALWAYS" />
+            <Button fx:id="fridge" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" text="MON FRIGO" HBox.hgrow="ALWAYS" />
+            <Button fx:id="menumaker" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="MENUMAKER" HBox.hgrow="ALWAYS" />
+            <Button fx:id="meals" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="PLATS" HBox.hgrow="ALWAYS" />
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -46,7 +46,7 @@
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@pictures/turkey.png" />
+                              <Image url="sample/ressources/pictures/turkey.png" />
                            </image>
                         </ImageView>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="- 4 personnes +" />
@@ -62,7 +62,7 @@
                         </Text>
                         <ImageView fitHeight="45.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@pictures/left-arrow.png" />
+                              <Image url="sample/ressources/pictures/left-arrow.png" />
                            </image>
                            <VBox.margin>
                               <Insets top="20.0" />
@@ -139,7 +139,7 @@
                      <children>
                         <ImageView fitHeight="50.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@pictures/right-arrow.png" />
+                              <Image url="sample/ressources/pictures/right-arrow.png" />
                            </image>
                            <VBox.margin>
                               <Insets top="20.0" />

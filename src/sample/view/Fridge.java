@@ -5,7 +5,7 @@ public class Fridge extends View {
 
     private final String LABEL = "FRIDGE";
 
-    private final int WIDTH = 1920;
+    private final int WIDTH = 1280;
 
     public String getXML_FILE() {
         return XML_FILE;
@@ -23,5 +23,5 @@ public class Fridge extends View {
         return HEIGHT;
     }
 
-    private final int HEIGHT = 1080;
+    private final int HEIGHT = 720;
 }

@@ -5,10 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import sample.controller.Controller;
-import sample.controller.FridgeController;
-import sample.controller.MealsController;
-import sample.controller.MenumakerController;
+import sample.controller.*;
 import sample.view.*;
 
 import java.io.IOException;
@@ -36,8 +33,8 @@ public class Router {
         addRoute(Page.MENUMAKER, new MenumakerController(), new Menumaker());
         addRoute(Page.FRIDGE, new FridgeController(), new Fridge());
         addRoute(Page.MEALS, new MealsController(), new Meals());
+        addRoute(Page.MEALFINDER, new MealFinderController(), new MealFinder());
         /*
-        addRoute(Page.MEALFINDER, new Controller(), new MealFinder());
         addRoute(Page.DISHCREATION, new Controller(), new DishCreation());
         addRoute(Page.ADDGUEST, new Controller(), new AddGuest());
         addRoute(Page.ACCOUNT, new Controller(), new AccountSettings());*/

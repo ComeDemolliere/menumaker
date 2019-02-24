@@ -3,7 +3,7 @@ package sample.controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import sample.Router;
-import sample.view.Page;
+import sample.Page;
 
 public abstract class Controller {
 
