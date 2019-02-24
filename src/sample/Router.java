@@ -34,10 +34,10 @@ public class Router {
         addRoute(Page.FRIDGE, new FridgeController(), new Fridge());
         addRoute(Page.MEALS, new MealsController(), new Meals());
         addRoute(Page.MEALFINDER, new MealFinderController(), new MealFinder());
+        addRoute(Page.ACCOUNT, new AccountController(), new AccountSettings());
         /*
         addRoute(Page.DISHCREATION, new Controller(), new DishCreation());
-        addRoute(Page.ADDGUEST, new Controller(), new AddGuest());
-        addRoute(Page.ACCOUNT, new Controller(), new AccountSettings());*/
+        addRoute(Page.ADDGUEST, new Controller(), new AddGuest());*/
 
         //load principal page
         change(Page.MENUMAKER);
