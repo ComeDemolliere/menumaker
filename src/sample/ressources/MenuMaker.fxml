@@ -18,7 +18,7 @@
          <children>
             <ImageView fx:id="user" fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                <image>
-                  <Image url="sample/ressources/pictures/user.png" />
+                  <Image url="/sample/ressources/pictures/user.png" />
                </image>
                <viewport>
                   <Rectangle2D width="3.0" />
@@ -52,7 +52,7 @@
                       <children>
                           <ImageView fitHeight="150.0" pickOnBounds="true" preserveRatio="true">
                               <image>
-                                  <Image url="sample/ressources/pictures/breakfast.png"/>
+                                  <Image url="/sample/ressources/pictures/breakfast.png"/>
                               </image>
                           </ImageView>
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Carbonara">
@@ -66,7 +66,7 @@
                       <children>
                           <ImageView fitHeight="150.0" pickOnBounds="true" preserveRatio="true">
                               <image>
-                                  <Image url="sample/ressources/pictures/breakfast.png"/>
+                                  <Image url="/sample/ressources/pictures/breakfast.png"/>
                               </image>
                           </ImageView>
                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Risotto">

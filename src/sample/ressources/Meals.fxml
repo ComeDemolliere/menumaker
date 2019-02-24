@@ -18,7 +18,7 @@
          <children>
             <ImageView fx:id="user" fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                <image>
-                  <Image url="sample/ressources/pictures/user.png" />
+                  <Image url="/sample/ressources/pictures/user.png" />
                </image>
                <viewport>
                   <Rectangle2D width="3.0" />
@@ -71,7 +71,7 @@
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="sample/ressources/pictures/breakfast.png" />
+                              <Image url="/sample/ressources/pictures/breakfast.png" />
                            </image>
                         </ImageView>
                         <TextArea maxWidth="150.0" text="Risotto&#10;&#10;Ingrédients : &#10;&#10;&#10; - ####&#10; - #####">
@@ -81,7 +81,7 @@
                         </TextArea>
                         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="sample/ressources/pictures/breakfast.png" />
+                              <Image url="/sample/ressources/pictures/breakfast.png" />
                            </image>
                            <HBox.margin>
                               <Insets left="70.0" />
@@ -109,7 +109,7 @@
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="sample/ressources/pictures/breakfast.png" />
+                              <Image url="/sample/ressources/pictures/breakfast.png" />
                            </image>
                         </ImageView>
                         <TextArea maxWidth="150.0" text="Galette Bretonne&#10;&#10;Ingrédients : &#10;&#10;&#10; - ####&#10; - #####">

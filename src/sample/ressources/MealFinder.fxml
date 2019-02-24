@@ -19,7 +19,7 @@
          <children>
             <ImageView fx:id="user" fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                <image>
-                  <Image url="sample/ressources/pictures/user.png" />
+                  <Image url="/sample/ressources/pictures/user.png" />
                </image>
                <viewport>
                   <Rectangle2D width="3.0" />
@@ -46,7 +46,7 @@
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="sample/ressources/pictures/turkey.png" />
+                              <Image url="/sample/ressources/pictures/turkey.png" />
                            </image>
                         </ImageView>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="- 4 personnes +" />
@@ -62,7 +62,7 @@
                         </Text>
                         <ImageView fitHeight="45.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="sample/ressources/pictures/left-arrow.png" />
+                              <Image url="/sample/ressources/pictures/left-arrow.png" />
                            </image>
                            <VBox.margin>
                               <Insets top="20.0" />
@@ -139,7 +139,7 @@
                      <children>
                         <ImageView fitHeight="50.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="sample/ressources/pictures/right-arrow.png" />
+                              <Image url="/sample/ressources/pictures/right-arrow.png" />
                            </image>
                            <VBox.margin>
                               <Insets top="20.0" />
