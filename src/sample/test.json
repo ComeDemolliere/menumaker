@@ -1,0 +1,14 @@
+{
+  "name":"Bolo",
+  "receipe": "lala",
+  "ingredients": [
+    {
+      "title": "bo",
+      "amount": 10
+    },
+    {
+      "title": "robin grillé",
+      "amount": 2
+    }
+  ]
+}
