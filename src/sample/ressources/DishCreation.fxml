@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <HBox alignment="CENTER" prefHeight="89.0" prefWidth="590.0" BorderPane.alignment="CENTER">
          <children>
@@ -19,7 +19,7 @@
                   <Image url="/sample/ressources/pictures/user.png" />
                </image>
             </ImageView>
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="194.0" text="MON FRIGO" />
+            <Button cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="40.0" prefWidth="194.0" scaleShape="false" text="MON FRIGO" />
             <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="191.0" text="MENUMAKER" />
             <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="140.0" text="PLATS" />
          </children>

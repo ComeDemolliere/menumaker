@@ -27,7 +27,7 @@
                   <Insets right="20.0" />
                </HBox.margin>
             </ImageView>
-            <Button fx:id="fridge" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" text="MON FRIGO" HBox.hgrow="ALWAYS" />
+            <Button fx:id="fridge" defaultButton="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" text="MON FRIGO" HBox.hgrow="ALWAYS" />
             <Button fx:id="menumaker" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="MENUMAKER" HBox.hgrow="ALWAYS" />
             <Button fx:id="meals" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="PLATS" HBox.hgrow="ALWAYS" />
          </children>

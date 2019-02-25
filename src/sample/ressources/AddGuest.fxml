@@ -23,7 +23,7 @@
                   <Rectangle2D width="3.0" />
                </viewport>
             </ImageView>
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="20.0" minWidth="80.0" mnemonicParsing="false" pickOnBounds="false" text="MON FRIGO" HBox.hgrow="ALWAYS" />
+            <Button cacheShape="false" centerShape="false" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="20.0" minWidth="80.0" mnemonicParsing="false" pickOnBounds="false" scaleShape="false" text="MON FRIGO" HBox.hgrow="ALWAYS" />
             <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="MENUMAKER" HBox.hgrow="ALWAYS" />
             <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="PLATS" HBox.hgrow="ALWAYS" />
          </children>
