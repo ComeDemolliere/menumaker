@@ -115,12 +115,12 @@
                               <Insets bottom="30.0" />
                            </VBox.margin>
                         </HBox>
-                        <Button mnemonicParsing="false" text="Changez votre mot de passe">
+                        <Button fx:id="changePassword" mnemonicParsing="false" text="Changez votre mot de passe">
                            <VBox.margin>
                               <Insets bottom="20.0" />
                            </VBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Deconnexion" />
+                        <Button fx:id="logOut" mnemonicParsing="false" text="Deconnexion" />
                      </children>
                   </VBox>
                </children>
@@ -201,7 +201,7 @@
                               <Insets bottom="30.0" />
                            </padding>
                         </HBox>
-                        <Button mnemonicParsing="false" text="Ajouter profil" />
+                        <Button fx:id="addProfile" mnemonicParsing="false" text="Ajouter profil" />
                      </children>
                   </VBox>
                </children>
