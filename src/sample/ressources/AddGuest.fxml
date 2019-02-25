@@ -23,9 +23,9 @@
                   <Rectangle2D width="3.0" />
                </viewport>
             </ImageView>
-            <Button cacheShape="false" centerShape="false" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="20.0" minWidth="80.0" mnemonicParsing="false" pickOnBounds="false" scaleShape="false" text="MON FRIGO" HBox.hgrow="ALWAYS" />
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="MENUMAKER" HBox.hgrow="ALWAYS" />
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="PLATS" HBox.hgrow="ALWAYS" />
+            <Button fx:id="fridge" cacheShape="false" centerShape="false" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="20.0" minWidth="80.0" mnemonicParsing="false" pickOnBounds="false" scaleShape="false" text="MON FRIGO" HBox.hgrow="ALWAYS" />
+            <Button fx:id="menumaker" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="MENUMAKER" HBox.hgrow="ALWAYS" />
+            <Button fx:id="meals" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="PLATS" HBox.hgrow="ALWAYS" />
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -45,7 +45,7 @@
                                  <children>
                                     <ImageView fitHeight="74.0" fitWidth="132.0" preserveRatio="true" HBox.hgrow="ALWAYS">
                                        <image>
-                                          <Image url="@pictures/avatar.png" />
+                                          <Image url="/sample/ressources/pictures/avatar.png" />
                                        </image>
                                        <viewport>
                                           <Rectangle2D width="3.0" />
@@ -88,7 +88,7 @@
                                  <children>
                                     <ImageView fitHeight="68.0" fitWidth="64.0">
                                        <image>
-                                          <Image url="@pictures/avatar.png" />
+                                          <Image url="/sample/ressources/pictures/avatar.png" />
                                        </image>
                                     </ImageView>
                                     <HBox alignment="CENTER" prefHeight="120.0" prefWidth="93.0" HBox.hgrow="ALWAYS">
@@ -110,7 +110,7 @@
    <bottom>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Sauvegarder" HBox.hgrow="ALWAYS" />
+            <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Sauvegarder" HBox.hgrow="ALWAYS" />
          </children></HBox>
    </bottom>
 </BorderPane>

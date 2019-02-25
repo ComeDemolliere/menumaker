@@ -35,9 +35,8 @@ public class Router {
         addRoute(Page.MEALS, new MealsController(), new Meals());
         addRoute(Page.MEALFINDER, new MealFinderController(), new MealFinder());
         addRoute(Page.ACCOUNT, new AccountController(), new AccountSettings());
-        /*
-        addRoute(Page.DISHCREATION, new Controller(), new DishCreation());
-        addRoute(Page.ADDGUEST, new Controller(), new AddGuest());*/
+        addRoute(Page.DISHCREATION, new DishCreationController(), new DishCreation());
+        addRoute(Page.ADDGUEST, new AddGuestController(), new AddGuest() );
 
         //load principal page
         change(Page.MENUMAKER);

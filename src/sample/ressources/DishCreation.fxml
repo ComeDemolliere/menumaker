@@ -19,9 +19,9 @@
                   <Image url="/sample/ressources/pictures/user.png" />
                </image>
             </ImageView>
-            <Button cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="40.0" prefWidth="194.0" scaleShape="false" text="MON FRIGO" />
-            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="191.0" text="MENUMAKER" />
-            <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="140.0" text="PLATS" />
+            <Button fx:id="fridge" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="40.0" prefWidth="194.0" scaleShape="false" text="MON FRIGO" />
+            <Button fx:id="menumaker" mnemonicParsing="false" prefHeight="42.0" prefWidth="191.0" text="MENUMAKER" />
+            <Button fx:id="meals" mnemonicParsing="false" prefHeight="43.0" prefWidth="140.0" text="PLATS" />
          </children>
       </HBox>
    </top>
@@ -57,7 +57,7 @@
                   <TextArea maxWidth="-Infinity" prefHeight="111.0" prefWidth="197.0" promptText="INGREDIENT" />
                   <Button alignment="CENTER_RIGHT" mnemonicParsing="false" text="ADD" />
                   <TextArea maxWidth="-Infinity" prefHeight="115.0" prefWidth="196.0" promptText="Recette" />
-                  <Button mnemonicParsing="false" text="Créer le plat" />
+                  <Button fx:id="createDish" mnemonicParsing="false" text="Créer le plat" />
                </children>
             </VBox>
          </children>
