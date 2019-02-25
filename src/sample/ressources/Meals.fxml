@@ -67,7 +67,7 @@
                         <Insets left="50.0" top="30.0" />
                      </VBox.margin>
                   </HBox>
-                  <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                  <HBox fx:id="fav" alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
