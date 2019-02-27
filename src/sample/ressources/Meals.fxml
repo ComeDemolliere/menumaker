@@ -95,7 +95,7 @@
                         <Insets left="20.0" top="20.0" />
                      </VBox.margin>
                      <children>
-                        <ListView fx:id="sug" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="160.0" HBox.hgrow="ALWAYS">
+                        <ListView fx:id="sug" orientation="HORIZONTAL" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="160.0" HBox.hgrow="ALWAYS">
                            <HBox.margin>
                               <Insets bottom="10.0" right="10.0" />
                            </HBox.margin>

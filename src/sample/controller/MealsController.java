@@ -3,6 +3,7 @@ package sample.controller;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.stream.JsonReader;
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
@@ -57,7 +58,11 @@ public class MealsController extends Controller {
         addGuest.setOnAction(actionEvent -> this.router.change(Page.ADDGUEST));
         createReceipe.setOnAction(actionEvent -> this.router.change(Page.DISHCREATION));
 
-        dishesfav.forEach(d -> fav.getItems().add(d.getDish()));
-        dishesSug.forEach(d -> sug.getItems().add(d.getDish()));
+        dishesfav.forEach(d -> fav.getItems().add(d.getBorderPane()));
+        dishesSug.forEach(d -> sug.getItems().add(d.getBorderPane()));
+    }
+
+    public void addDishToSug(DishComponent dishComponent){
+        dishesSug.add(dishComponent);
     }
 }

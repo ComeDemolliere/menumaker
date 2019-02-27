@@ -2,6 +2,7 @@ package sample.component;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.layout.BorderPane;
 import sample.view.View;
 
 import java.io.IOException;
@@ -21,4 +22,6 @@ public abstract class Component {
 
         System.out.println(parent);
     }
+
+    public abstract BorderPane getBorderPane();
 }

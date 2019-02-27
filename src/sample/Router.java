@@ -100,4 +100,8 @@ public class Router {
         }
     }
 
+    public Controller getController(Page page){
+        return controllerRoutes.get(page);
+    }
+
 }

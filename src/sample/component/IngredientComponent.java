@@ -22,11 +22,17 @@ public class IngredientComponent extends Component {
     public IngredientComponent(Ingredient ingredient){
         this.load(new IngredientView());
 
+        this.ingredient = ingredient;
         this.name.setText(ingredient.getTitle());
         this.quantity.setText("" + ingredient.getAmount());
     }
 
-    public BorderPane getIngredient(){
+    public Ingredient getIngredient(){
+        return this.ingredient;
+    }
+
+    @Override
+    public BorderPane getBorderPane() {
         return this.ingredientPanel;
     }
 }

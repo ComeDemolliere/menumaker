@@ -1,24 +1,13 @@
 package sample.component;
 
-import com.sun.javafx.geom.BaseBounds;
-import com.sun.javafx.geom.transform.BaseTransform;
-import com.sun.javafx.jmx.MXNodeAlgorithm;
-import com.sun.javafx.jmx.MXNodeAlgorithmContext;
-import com.sun.javafx.sg.prism.NGNode;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
-import models.Ingredient;
 import models.Receipe;
 import sample.view.DishView;
-import sample.view.View;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,10 +37,11 @@ public class DishComponent extends Component{
         System.out.println("sample/ressources/pictures/" + receipe.getImage());
         this.image.setImage(new Image("sample/ressources/pictures/" + receipe.getImage()));
         this.title.setText(receipe.getName());
-        this.ingredientComponentList.forEach(i -> this.ingredients.getItems().add(i.getIngredient()));
+        this.ingredientComponentList.forEach(i -> this.ingredients.getItems().add(i.getBorderPane()));
     }
 
-    public BorderPane getDish(){
+    @Override
+    public BorderPane getBorderPane() {
         return this.dish;
     }
 }
