@@ -44,7 +44,7 @@
                   <Insets />
               </HBox.margin>
            </Separator>
-         <ListView fx:id="mealList" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefWidth="420.0" HBox.hgrow="ALWAYS" />
+         <ListView fx:id="mealList" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefWidth="440.0" HBox.hgrow="ALWAYS" />
        </HBox>
    </center>
    <bottom>

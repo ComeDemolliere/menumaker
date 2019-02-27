@@ -46,6 +46,10 @@ public class MenumakerController extends Controller{
         starter.setOnAction(actionEvent -> this.router.change(Page.MEALFINDER));
         mainCourse.setOnAction(actionEvent -> this.router.change(Page.MEALFINDER));
         desert.setOnAction(actionEvent -> this.router.change(Page.MEALFINDER));
-        dishes.forEach(d -> mealList.getItems().add(d.getBorderPane()));
+        dishes.forEach(d -> mealList.getItems().add(0, d.getBorderPane()));
+    }
+
+    public void addDish(DishComponent dishComponent){
+        dishes.add(dishComponent);
     }
 }

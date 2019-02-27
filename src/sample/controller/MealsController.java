@@ -63,6 +63,10 @@ public class MealsController extends Controller {
     }
 
     public void addDishToSug(DishComponent dishComponent){
-        dishesSug.add(dishComponent);
+        dishesSug.add(0, dishComponent);
+    }
+
+    public void addDishToFav(DishComponent dishComponent){
+        dishesfav.add(dishComponent);
     }
 }

@@ -84,7 +84,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30;" text="Suggestion" wrappingWidth="173.30728912353516" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30;" text="Suggestions" />
                      </children>
                      <VBox.margin>
                         <Insets left="50.0" top="50.0" />

@@ -72,14 +72,10 @@
                <children>
                   <VBox alignment="CENTER">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Recette">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Text>
-                        <TextArea fx:id="receipe" prefHeight="200.0" prefWidth="200.0">
+                        <TextField fx:id="name" alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" text="Nom de la recette" />
+                        <TextArea fx:id="receipe" prefHeight="200.0" prefWidth="200.0" text="Vous pouvez indiquer la recette à réaliser...">
                            <VBox.margin>
-                              <Insets top="10.0" />
+                              <Insets top="20.0" />
                            </VBox.margin>
                         </TextArea>
                      </children>
@@ -105,12 +101,12 @@
                   </HBox>
                   <HBox alignment="CENTER">
                      <children>
-                        <TextField fx:id="ingredient" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" text="Ingrédient">
+                        <TextField fx:id="ingredient" alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" text="Ingrédient">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </TextField>
-                        <TextField fx:id="quantity" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="75.0" text="0">
+                        <TextField fx:id="quantity" alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="75.0" text="0">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>

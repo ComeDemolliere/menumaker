@@ -30,6 +30,9 @@ public class DishCreationController extends Controller{
     private TextArea receipe;
 
     @FXML
+    private TextField name;
+
+    @FXML
     private Button addIngredient;
 
     @FXML
@@ -49,7 +52,7 @@ public class DishCreationController extends Controller{
     public void init(){
         super.init();
         createDish.setOnAction(actionEvent -> storeDish());
-        validateDish.setOnAction(actionEvent -> this.router.change(Page.MENUMAKER));
+        validateDish.setOnAction(actionEvent -> validateDish());
         addIngredient.setOnAction(actionEvent -> addIngredient());
     }
 
@@ -61,10 +64,19 @@ public class DishCreationController extends Controller{
     }
 
     private void storeDish(){
-        Receipe currentReceipe = new Receipe("default_dish.png", "test",
+        Receipe currentReceipe = new Receipe("default_dish.png", name.getText(),
                 receipe.getText(), ingredientList, false);
 
         ((MealsController) router.getController(Page.MEALS)).addDishToSug(new DishComponent(currentReceipe));
         router.change(Page.MEALS);
+    }
+
+    private void validateDish(){
+        Receipe currentReceipe = new Receipe("default_dish.png", name.getText(),
+                receipe.getText(), ingredientList, false);
+
+        ((MealsController) router.getController(Page.MEALS)).addDishToFav(new DishComponent(currentReceipe));
+        ((MenumakerController) router.getController(Page.MENUMAKER)).addDish(new DishComponent(currentReceipe));
+        router.change(Page.MENUMAKER);
     }
 }
