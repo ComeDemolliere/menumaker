@@ -1,14 +1,68 @@
 {
-  "name":"Bolo",
-  "receipe": "lala",
-  "ingredients": [
+  "receipes": [
     {
-      "title": "bo",
-      "amount": 10
+      "file_image": "bolognaise.jpg",
+      "name": "Pâtes bolognaise",
+      "receipe": "Faire cuire les pâtes et mettre la sauce tomate",
+      "ingredients": [
+        {
+          "title": "boeuf",
+          "amount": 400
+        },
+        {
+          "title": "tomates",
+          "amount": 5
+        },
+        {
+          "title": "carotte",
+          "amount": 1
+        },
+        {
+          "title": "oignons",
+          "amount": 3
+        },
+        {
+          "title": "feuille de laurier",
+          "amount": 3
+        }
+      ],
+      "consumed": true
     },
     {
-      "title": "robin grillé",
-      "amount": 2
+      "file_image": "risotto.jpg",
+      "name": "Risotto",
+      "receipe": "on verra plus tard",
+      "ingredients": [
+        {
+          "title": "riz rond",
+          "amount": 250
+        },
+        {
+          "title": "oignon",
+          "amount": 1
+        },
+        {
+          "title": "bouillon de légumes",
+          "amount": 2
+        },
+        {
+          "title": "vin blanc",
+          "amount": 10
+        },
+        {
+          "title": "parmesan",
+          "amount": 80
+        },
+        {
+          "title": "beurre",
+          "amount": 80
+        },
+        {
+          "title": "huilde d'olive",
+          "amount": 2
+        }
+      ],
+      "consumed": true
     }
   ]
 }

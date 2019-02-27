@@ -45,8 +45,9 @@ public class DishComponent extends Component{
 
         receipe.getIngredients().forEach(i -> ingredientComponentList.add(new IngredientComponent(i)));
 
+        System.out.println("sample/ressources/pictures/" + receipe.getImage());
+        this.image.setImage(new Image("sample/ressources/pictures/" + receipe.getImage()));
         this.title.setText(receipe.getName());
-
         this.ingredientComponentList.forEach(i -> this.ingredients.getItems().add(i.getIngredient()));
     }
 

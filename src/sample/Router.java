@@ -1,14 +1,21 @@
 package sample;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.stream.JsonReader;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import models.Dishes;
 import sample.controller.*;
 import sample.view.*;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Router {
@@ -16,6 +23,7 @@ public class Router {
     private HashMap<Page, Controller> controllerRoutes;
     private FXMLLoader loader;
     private HashMap<Page, View> viewRoutes;
+    private Dishes dishes;
 
 
     private Stage main;
@@ -29,10 +37,13 @@ public class Router {
     }
 
     public void init(){
+        //load json
+        this.loadJson();
+
         //init route
-        addRoute(Page.MENUMAKER, new MenumakerController(), new Menumaker());
+        addRoute(Page.MENUMAKER, new MenumakerController(dishes.getReceipes()), new Menumaker());
         addRoute(Page.FRIDGE, new FridgeController(), new Fridge());
-        addRoute(Page.MEALS, new MealsController(), new Meals());
+        addRoute(Page.MEALS, new MealsController(dishes.getReceipes()), new Meals());
         addRoute(Page.MEALFINDER, new MealFinderController(), new MealFinder());
         addRoute(Page.ACCOUNT, new AccountController(), new AccountSettings());
         addRoute(Page.DISHCREATION, new DishCreationController(), new DishCreation());
@@ -71,5 +82,22 @@ public class Router {
         this.main.show();
     }
 
+    private void loadJson(){
+
+        GsonBuilder builder = new GsonBuilder();
+        builder.setPrettyPrinting();
+
+        Gson gson = builder.create();
+
+        JsonReader reader = null;
+        try {
+            reader = new JsonReader(new FileReader("src/sample/test.json"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        if(reader != null){
+            this.dishes = gson.fromJson(reader, Dishes.class);
+        }
+    }
 
 }
