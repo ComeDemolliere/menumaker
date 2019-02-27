@@ -15,7 +15,6 @@ import java.util.List;
 public class MenumakerController extends Controller{
 
     private List<DishComponent> dishes;
-    private List<Receipe> receipes;
 
     @FXML
     private Button starter;
@@ -31,7 +30,6 @@ public class MenumakerController extends Controller{
 
 
     public MenumakerController(List<Receipe> receipes){
-        this.receipes = receipes;
         dishes = new ArrayList<>();
 
         for (Receipe receipe: receipes) {

@@ -5,7 +5,9 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.stream.JsonReader;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import models.Dishes;
 import models.Ingredient;
@@ -21,8 +23,8 @@ import java.util.List;
 
 public class MealsController extends Controller {
 
-    private List<DishComponent> dishes;
-    private List<Receipe> receipes;
+    private List<DishComponent> dishesfav;
+    private List<DishComponent> dishesSug;
 
     @FXML
     private Button addGuest;
@@ -31,12 +33,21 @@ public class MealsController extends Controller {
     private Button createReceipe;
 
     @FXML
-    private HBox fav;
+    private ListView<BorderPane> fav;
+
+    @FXML
+    private ListView<BorderPane> sug;
 
     public MealsController(List<Receipe> receipes){
-        this.receipes = receipes;
-        dishes = new ArrayList<>();
-        receipes.forEach(d -> dishes.add(new DishComponent(d)));
+        dishesfav = new ArrayList<>();
+        dishesSug = new ArrayList<>();
+
+        for (Receipe receipe: receipes) {
+            if(receipe.isConsumed())
+                dishesfav.add(new DishComponent(receipe));
+            else
+                dishesSug.add(new DishComponent(receipe));
+        }
     }
 
     @Override
@@ -46,6 +57,7 @@ public class MealsController extends Controller {
         addGuest.setOnAction(actionEvent -> this.router.change(Page.ADDGUEST));
         createReceipe.setOnAction(actionEvent -> this.router.change(Page.DISHCREATION));
 
-        dishes.forEach(d -> fav.getChildren().add(d.getDish()));
+        dishesfav.forEach(d -> fav.getItems().add(d.getDish()));
+        dishesSug.forEach(d -> sug.getItems().add(d.getDish()));
     }
 }

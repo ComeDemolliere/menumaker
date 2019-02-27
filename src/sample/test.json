@@ -63,6 +63,38 @@
         }
       ],
       "consumed": true
+    },
+    {
+      "file_image": "carbonara.jpg",
+      "name": "Pâtes carbonara",
+      "receipe": "on verra plus tard",
+      "ingredients": [
+        {
+          "title": "spaghettis",
+          "amount": 250
+        },
+        {
+          "title": "oignon",
+          "amount": 1
+        },
+        {
+          "title": "lardons",
+          "amount": 350
+        },
+        {
+          "title": "crème fraîche",
+          "amount": 30
+        },
+        {
+          "title": "jaunes d'oeufs",
+          "amount": 2
+        },
+        {
+          "title": "gruyère",
+          "amount": 75
+        }
+      ],
+      "consumed": false
     }
   ]
 }
