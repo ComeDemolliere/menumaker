@@ -26,15 +26,6 @@ public class Main extends Application {
 
     public static void main(String[] args) throws FileNotFoundException {
         launch(args);
-        GsonBuilder builder = new GsonBuilder();
-        builder.setPrettyPrinting();
-
-        Gson gson = builder.create();
-
-        JsonReader reader = new JsonReader(new FileReader("/home/arconec/Documents/S6/menumaker/src/sample/test.json"));
-
-        Receipe receipe = gson.fromJson(reader, Receipe.class);
-
-
+        System.out.println("Page close");
     }
 }

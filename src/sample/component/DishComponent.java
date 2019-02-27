@@ -13,15 +13,18 @@ import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.text.Text;
 import models.Ingredient;
+import models.Receipe;
 import sample.view.DishView;
 import sample.view.View;
-
-import javax.xml.soap.Text;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
-public class DishComponent extends Node {
+public class DishComponent extends Component{
+
+    private List<IngredientComponent> ingredientComponentList;
 
     @FXML
     private BorderPane dish;
@@ -33,51 +36,21 @@ public class DishComponent extends Node {
     private Text title;
 
     @FXML
-    private ListView<Ingredient> ingredients;
+    private ListView<BorderPane> ingredients;
+
+    public DishComponent(Receipe receipe){
+        this.load(new DishView());
+
+        this.ingredientComponentList = new ArrayList<>();
+
+        receipe.getIngredients().forEach(i -> ingredientComponentList.add(new IngredientComponent(i)));
+
+        this.title.setText(receipe.getName());
+
+        this.ingredientComponentList.forEach(i -> this.ingredients.getItems().add(i.getIngredient()));
+    }
 
     public BorderPane getDish(){
         return this.dish;
-    }
-
-    public void setDish( String title, List<Ingredient> ingredients){
-        //this.image.setImage(image);
-        this.title.setValue(title);
-        this.ingredients.getItems().addAll(ingredients);
-    }
-
-    public void load(){
-        FXMLLoader loader = new FXMLLoader();
-
-        View view = new DishView();
-
-        loader.setController(this);
-        Parent parent = null;
-        try {
-            parent = loader.load(getClass().getResourceAsStream("../" + view.getXML_FILE()));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        System.out.println(parent);
-    }
-
-    @Override
-    protected NGNode impl_createPeer() {
-        return null;
-    }
-
-    @Override
-    public BaseBounds impl_computeGeomBounds(BaseBounds baseBounds, BaseTransform baseTransform) {
-        return null;
-    }
-
-    @Override
-    protected boolean impl_computeContains(double v, double v1) {
-        return false;
-    }
-
-    @Override
-    public Object impl_processMXNode(MXNodeAlgorithm mxNodeAlgorithm, MXNodeAlgorithmContext mxNodeAlgorithmContext) {
-        return null;
     }
 }
