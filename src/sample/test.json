@@ -31,7 +31,7 @@
     {
       "file_image": "risotto.jpg",
       "name": "Risotto",
-      "receipe": "on verra plus tard",
+      "receipe": "On verra plus tard",
       "ingredients": [
         {
           "title": "riz rond",
@@ -67,7 +67,7 @@
     {
       "file_image": "carbonara.jpg",
       "name": "Pâtes carbonara",
-      "receipe": "on verra plus tard",
+      "receipe": "Etape 1\nCuire les pâtes.\nEtape 2\nPendant ce temps, faire dorer les lardons dans une poêle à sec.\nEtape 3\nLorsqu'ils sont dorés, ajouter la crème et laisser mijoter durant 10 minutes.\nEtape 4\nEgoutter les pâtes, les verser dans la sauce, ajouter l'oeuf battu, mélanger et servir saupoudrer de fromage.",
       "ingredients": [
         {
           "title": "spaghettis",

@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.stream.JsonReader;
 import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
@@ -80,15 +81,23 @@ public class MealsController extends Controller {
 
     private void validateDishfav() {
         DishValidationController dishController = (DishValidationController) this.router.getController(Page.DISHVALIDATION);
-        dishController.setReceipe(dishesfav.get(fav.getSelectionModel().getSelectedIndex()).getReceipe());
 
-        router.change(Page.DISHVALIDATION);
+        int index = fav.getSelectionModel().getSelectedIndex();
+
+        if(index >= 0){
+            dishController.setReceipe(dishesfav.get(index).getReceipe());
+            router.change(Page.DISHVALIDATION);
+        }
     }
 
     private void validateDishSug() {
         DishValidationController dishController = (DishValidationController) this.router.getController(Page.DISHVALIDATION);
-        dishController.setReceipe(dishesSug.get(sug.getSelectionModel().getSelectedIndex()).getReceipe());
 
-        router.change(Page.DISHVALIDATION);
+        int index = sug.getSelectionModel().getSelectedIndex();
+
+        if(index >= 0){
+            dishController.setReceipe(dishesSug.get(index).getReceipe());
+            router.change(Page.DISHVALIDATION);
+        }
     }
 }
