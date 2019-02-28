@@ -18,6 +18,7 @@ public class Receipe {
         this.consumed = consumed;
     }
 
+    public String getReceipe() { return this.receipe;}
     public String getName(){
         return this.name;
     }

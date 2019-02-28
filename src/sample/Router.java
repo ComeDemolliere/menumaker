@@ -48,6 +48,7 @@ public class Router {
         addRoute(Page.ACCOUNT, new AccountController(), new AccountSettings());
         addRoute(Page.DISHCREATION, new DishCreationController(), new DishCreation());
         addRoute(Page.ADDGUEST, new AddGuestController(), new AddGuest() );
+        addRoute(Page.DISHVALIDATION, new DishValidationController(), new DishValidationView());
 
         //load principal page
         change(Page.MENUMAKER);

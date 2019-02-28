@@ -14,6 +14,7 @@ import java.util.List;
 public class DishComponent extends Component{
 
     private List<IngredientComponent> ingredientComponentList;
+    private Receipe receipe;
 
     @FXML
     private BorderPane dish;
@@ -29,12 +30,12 @@ public class DishComponent extends Component{
 
     public DishComponent(Receipe receipe){
         this.load(new DishView());
+        this.receipe = receipe;
 
         this.ingredientComponentList = new ArrayList<>();
 
         receipe.getIngredients().forEach(i -> ingredientComponentList.add(new IngredientComponent(i)));
 
-        System.out.println("sample/ressources/pictures/" + receipe.getImage());
         this.image.setImage(new Image("sample/ressources/pictures/" + receipe.getImage()));
         this.title.setText(receipe.getName());
         this.ingredientComponentList.forEach(i -> this.ingredients.getItems().add(i.getBorderPane()));
@@ -43,5 +44,9 @@ public class DishComponent extends Component{
     @Override
     public BorderPane getBorderPane() {
         return this.dish;
+    }
+
+    public Receipe getReceipe(){
+        return this.receipe;
     }
 }

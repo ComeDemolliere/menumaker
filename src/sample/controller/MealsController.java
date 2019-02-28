@@ -39,6 +39,12 @@ public class MealsController extends Controller {
     @FXML
     private ListView<BorderPane> sug;
 
+    @FXML
+    private Button viewDishFav;
+
+    @FXML
+    private Button viewDishSug;
+
     public MealsController(List<Receipe> receipes){
         dishesfav = new ArrayList<>();
         dishesSug = new ArrayList<>();
@@ -60,6 +66,8 @@ public class MealsController extends Controller {
 
         dishesfav.forEach(d -> fav.getItems().add(d.getBorderPane()));
         dishesSug.forEach(d -> sug.getItems().add(d.getBorderPane()));
+        viewDishFav.setOnAction(actionEvent -> validateDishfav());
+        viewDishSug.setOnAction(actionEvent -> validateDishSug());
     }
 
     public void addDishToSug(DishComponent dishComponent){
@@ -68,5 +76,19 @@ public class MealsController extends Controller {
 
     public void addDishToFav(DishComponent dishComponent){
         dishesfav.add(dishComponent);
+    }
+
+    private void validateDishfav() {
+        DishValidationController dishController = (DishValidationController) this.router.getController(Page.DISHVALIDATION);
+        dishController.setReceipe(dishesfav.get(fav.getSelectionModel().getSelectedIndex()).getReceipe());
+
+        router.change(Page.DISHVALIDATION);
+    }
+
+    private void validateDishSug() {
+        DishValidationController dishController = (DishValidationController) this.router.getController(Page.DISHVALIDATION);
+        dishController.setReceipe(dishesSug.get(sug.getSelectionModel().getSelectedIndex()).getReceipe());
+
+        router.change(Page.DISHVALIDATION);
     }
 }

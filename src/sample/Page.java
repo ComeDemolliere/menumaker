@@ -7,5 +7,6 @@ public enum Page {
     MEALFINDER,
     DISHCREATION,
     ADDGUEST,
-    ACCOUNT
+    ACCOUNT,
+    DISHVALIDATION
 }
