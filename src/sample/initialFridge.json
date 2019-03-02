@@ -1,0 +1,35 @@
+{
+  "file_image": "no image",
+  "name": "Fridge",
+  "receipe": "",
+  "ingredients": [
+    {
+      "title": "riz rond",
+      "amount": 1000
+    },
+    {
+      "title": "oignon",
+      "amount": 5
+    },
+    {
+      "title": "bouillon de légumes",
+      "amount": 3
+    },
+    {
+      "title": "pâte",
+      "amount": 1000
+    },
+    {
+      "title": "parmesan",
+      "amount": 300
+    },
+    {
+      "title": "beurre",
+      "amount": 250
+    },
+    {
+      "title": "huilde d'olive",
+      "amount": 10
+    }
+  ]
+}

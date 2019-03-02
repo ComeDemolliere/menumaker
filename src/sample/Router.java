@@ -9,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import models.Dishes;
+import models.Ingredient;
+import models.Receipe;
 import sample.controller.*;
 import sample.view.*;
 
@@ -17,14 +19,16 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Router {
 
     private HashMap<Page, Controller> controllerRoutes;
     private FXMLLoader loader;
     private HashMap<Page, View> viewRoutes;
-    private Dishes dishes;
 
+    private Dishes dishes;
+    private List<Ingredient> ingredients;
 
     private Stage main;
 
@@ -42,7 +46,7 @@ public class Router {
 
         //init route
         addRoute(Page.MENUMAKER, new MenumakerController(dishes.getReceipes()), new Menumaker());
-        addRoute(Page.FRIDGE, new FridgeController(), new Fridge());
+        addRoute(Page.FRIDGE, new FridgeController(ingredients), new Fridge());
         addRoute(Page.MEALS, new MealsController(dishes.getReceipes()), new Meals());
         addRoute(Page.MEALFINDER, new MealFinderController(), new MealFinder());
         addRoute(Page.ACCOUNT, new AccountController(), new AccountSettings());
@@ -90,14 +94,19 @@ public class Router {
 
         Gson gson = builder.create();
 
-        JsonReader reader = null;
+        JsonReader readerDishes = null;
+        JsonReader readerFridge = null;
         try {
-            reader = new JsonReader(new FileReader("src/sample/test.json"));
+            readerDishes = new JsonReader(new FileReader("src/sample/receipes.json"));
+            readerFridge = new JsonReader(new FileReader("src/sample/initialFridge.json"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        if(reader != null){
-            this.dishes = gson.fromJson(reader, Dishes.class);
+        if(readerDishes != null)
+            this.dishes = gson.fromJson(readerDishes, Dishes.class);
+        if(readerFridge != null){
+            Receipe receipe = gson.fromJson(readerFridge, Receipe.class);
+            this.ingredients = receipe.getIngredients();
         }
     }
 
