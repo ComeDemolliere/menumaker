@@ -84,6 +84,7 @@ public class DishCreationController extends Controller{
 
         ((MealsController) router.getController(Page.MEALS)).addDishToFav(new DishComponent(currentReceipe));
         ((MenumakerController) router.getController(Page.MENUMAKER)).addDish(new DishComponent(currentReceipe));
+        ((MenumakerController) router.getController(Page.MENUMAKER)).updateMainPage();
         router.change(Page.MENUMAKER);
     }
 }

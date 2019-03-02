@@ -59,6 +59,7 @@ public class DishValidationController extends Controller {
         }
 
         ((MenumakerController) router.getController(Page.MENUMAKER)).addDish(new DishComponent(receipe));
+        ((MenumakerController) router.getController(Page.MENUMAKER)).updateMainPage();
         router.change(Page.MENUMAKER);
     }
 }
