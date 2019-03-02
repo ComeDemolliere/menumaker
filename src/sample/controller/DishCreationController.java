@@ -51,6 +51,7 @@ public class DishCreationController extends Controller{
     @Override
     public void init(){
         super.init();
+        ingredientList.clear();
         createDish.setOnAction(actionEvent -> storeDish());
         validateDish.setOnAction(actionEvent -> validateDish());
         addIngredient.setOnAction(actionEvent -> addIngredient());

@@ -22,7 +22,15 @@ public class Ingredient {
         this.amount += amount;
     }
 
-    public void decreaseAmount(int amount) {
-        this.amount -= amount;
+    public int decreaseAmount(int amount) {
+        if(this.amount - amount >= 0){
+            this.amount -= amount;
+            return 0;
+        }
+        else{
+            int rest = amount - this.amount;
+            this.amount = 0;
+            return rest;
+        }
     }
 }

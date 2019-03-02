@@ -75,18 +75,30 @@ public class FridgeController extends Controller {
     }
 
     public void addIngredient(Ingredient ingredient){
-        if(!tryToPlaceIngredient(ingredient, fridgeIngredients)){
-            if(!tryToPlaceIngredient(ingredient, shopIngredients))
-                shopIngredients.add(new IngredientComponent(ingredient));
+        Ingredient ing = new Ingredient(ingredient.getTitle(), ingredient.getAmount());
+        if(!tryToPlaceIngredient(ing, fridgeIngredients, false)){
+            if(!tryToPlaceIngredient(ing, shopIngredients, true))
+                shopIngredients.add(new IngredientComponent(ing));
         }
     }
 
-    private boolean tryToPlaceIngredient(Ingredient ingredient, List<IngredientComponent> ingredients){
+    private boolean tryToPlaceIngredient(Ingredient ingredient, List<IngredientComponent> ingredients, boolean add){
         boolean isPlaced = false;
         for (IngredientComponent i: ingredients) {
             if(i.getIngredient().getTitle().equals(ingredient.getTitle())){
-                i.getIngredient().increaseAmount(ingredient.getAmount());
-                isPlaced = true;
+                if(add){
+                    i.getIngredient().increaseAmount(ingredient.getAmount());
+                    isPlaced = true;
+                }
+                else{
+                    int rest = i.getIngredient().decreaseAmount(ingredient.getAmount());
+                    if(rest != 0){
+                        ingredient.decreaseAmount(ingredient.getAmount() - rest);
+                        ingredients.remove(i);
+                        return false;
+                    }
+                    else isPlaced = true;
+                }
                 i.refresh();
                 break;
             }
@@ -124,7 +136,7 @@ public class FridgeController extends Controller {
 
     private void updateFridge(){
         for (IngredientComponent shopIng: shopIngredients) {
-            if(!tryToPlaceIngredient(shopIng.getIngredient(), fridgeIngredients))
+            if(!tryToPlaceIngredient(shopIng.getIngredient(), fridgeIngredients, true))
                 fridgeIngredients.add(shopIng);
         }
         //clear
