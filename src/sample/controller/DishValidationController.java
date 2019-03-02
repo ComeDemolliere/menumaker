@@ -7,6 +7,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
+import models.Ingredient;
 import models.Receipe;
 import sample.Page;
 import sample.component.DishComponent;
@@ -51,6 +52,12 @@ public class DishValidationController extends Controller {
     }
 
     private void validation(){
+        //update fridge
+        FridgeController fridge = ((FridgeController) router.getController(Page.FRIDGE));
+        for (Ingredient ingredient: receipe.getIngredients()){
+            fridge.addIngredient(ingredient);
+        }
+
         ((MenumakerController) router.getController(Page.MENUMAKER)).addDish(new DishComponent(receipe));
         router.change(Page.MENUMAKER);
     }

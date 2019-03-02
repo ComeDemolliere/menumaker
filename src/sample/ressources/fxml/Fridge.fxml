@@ -64,12 +64,12 @@
                         </HBox>
                         <HBox alignment="TOP_CENTER" maxHeight="30.0" minWidth="-Infinity" prefHeight="30.0" VBox.vgrow="ALWAYS">
                            <children>
-                              <TextField fx:id="fridgeIng" alignment="CENTER" prefWidth="150.0" text="Ingrédient">
+                              <TextField fx:id="fridgeIng" alignment="CENTER" prefWidth="150.0" promptText="Ingrédient">
                                  <HBox.margin>
                                     <Insets right="10.0" />
                                  </HBox.margin>
                               </TextField>
-                              <TextField fx:id="fridgeQuantity" alignment="CENTER" prefWidth="70.0" text="0">
+                              <TextField fx:id="fridgeQuantity" alignment="CENTER" prefWidth="70.0" promptText="0">
                                  <HBox.margin>
                                     <Insets right="10.0" />
                                  </HBox.margin>
@@ -111,12 +111,12 @@
                         </HBox>
                         <HBox alignment="TOP_CENTER" maxHeight="30.0" minWidth="-Infinity" prefHeight="30.0">
                            <children>
-                              <TextField fx:id="shopIng" alignment="CENTER" prefWidth="150.0" text="Ingrédient">
+                              <TextField fx:id="shopIng" alignment="CENTER" prefWidth="150.0" promptText="Ingrédient">
                                  <HBox.margin>
                                     <Insets right="10.0" />
                                  </HBox.margin>
                               </TextField>
-                              <TextField fx:id="shopQuantity" alignment="CENTER" prefWidth="70.0" text="0">
+                              <TextField fx:id="shopQuantity" alignment="CENTER" prefWidth="70.0" promptText="0">
                                  <HBox.margin>
                                     <Insets right="10.0" />
                                  </HBox.margin>
@@ -137,7 +137,7 @@
    <bottom>
       <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" text="Course réalisée" />
+            <Button fx:id="validate" mnemonicParsing="false" text="Course réalisée" />
          </children>
       </HBox>
    </bottom>

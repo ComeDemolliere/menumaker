@@ -46,6 +46,9 @@ public class FridgeController extends Controller {
     @FXML
     private Button addIngInShop;
 
+    @FXML
+    private Button validate;
+
     public FridgeController(List<Ingredient> ingredients){
         this.shopIngredients = new ArrayList<>();
         this.fridgeIngredients = new ArrayList<>();
@@ -66,6 +69,29 @@ public class FridgeController extends Controller {
         //add action
         addIngInFridge.setOnAction(actionEvent -> addIngInFridge());
         addIngInShop.setOnAction(actionEvent -> addIngInShop());
+
+        //update fridge with shop list
+        validate.setOnAction(actionEvent -> updateFridge());
+    }
+
+    public void addIngredient(Ingredient ingredient){
+        if(!tryToPlaceIngredient(ingredient, fridgeIngredients)){
+            if(!tryToPlaceIngredient(ingredient, shopIngredients))
+                shopIngredients.add(new IngredientComponent(ingredient));
+        }
+    }
+
+    private boolean tryToPlaceIngredient(Ingredient ingredient, List<IngredientComponent> ingredients){
+        boolean isPlaced = false;
+        for (IngredientComponent i: ingredients) {
+            if(i.getIngredient().getTitle().equals(ingredient.getTitle())){
+                i.getIngredient().increaseAmount(ingredient.getAmount());
+                isPlaced = true;
+                i.refresh();
+                break;
+            }
+        }
+        return isPlaced;
     }
 
     private void deleteIngInfridge(){
@@ -94,5 +120,19 @@ public class FridgeController extends Controller {
         Ingredient ingredient= new Ingredient(shopIng.getText(), Integer.parseInt(shopQuantity.getText()));
         shopIngredients.add(0, new IngredientComponent(ingredient));
         shopList.getItems().add(0, shopIngredients.get(0).getBorderPane());
+    }
+
+    private void updateFridge(){
+        for (IngredientComponent shopIng: shopIngredients) {
+            if(!tryToPlaceIngredient(shopIng.getIngredient(), fridgeIngredients))
+                fridgeIngredients.add(shopIng);
+        }
+        //clear
+        shopIngredients.clear();
+        fridgeList.getItems().clear();
+        shopList.getItems().clear();
+
+        //update fridge
+        fridgeIngredients.forEach( i -> fridgeList.getItems().add(i.getBorderPane()));
     }
 }

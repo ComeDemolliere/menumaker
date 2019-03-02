@@ -23,12 +23,16 @@ public class IngredientComponent extends Component {
         this.load(new IngredientView());
 
         this.ingredient = ingredient;
-        this.name.setText(ingredient.getTitle());
-        this.quantity.setText("" + ingredient.getAmount());
+        this.refresh();
     }
 
     public Ingredient getIngredient(){
         return this.ingredient;
+    }
+
+    public void refresh(){
+        this.name.setText(ingredient.getTitle());
+        this.quantity.setText("" + ingredient.getAmount());
     }
 
     @Override

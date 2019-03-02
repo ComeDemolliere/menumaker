@@ -1,7 +1,7 @@
 package sample.view;
 
 public class Fridge extends View {
-    private final String XML_FILE = "ressources/Fridge.fxml";
+    private final String XML_FILE = "ressources/fxml/Fridge.fxml";
 
     private final String LABEL = "FRIDGE";
 

@@ -1,7 +1,7 @@
 package sample.view;
 
 public class DishValidationView extends View {
-    private final String XML_FILE = "ressources/DishValidation.fxml";
+    private final String XML_FILE = "ressources/fxml/DishValidation.fxml";
 
     private final String LABEL = "DISHVALIDATION";
 

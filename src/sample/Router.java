@@ -97,8 +97,8 @@ public class Router {
         JsonReader readerDishes = null;
         JsonReader readerFridge = null;
         try {
-            readerDishes = new JsonReader(new FileReader("src/sample/receipes.json"));
-            readerFridge = new JsonReader(new FileReader("src/sample/initialFridge.json"));
+            readerDishes = new JsonReader(new FileReader("src/sample/ressources/json/receipes.json"));
+            readerFridge = new JsonReader(new FileReader("src/sample/ressources/json/initialFridge.json"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

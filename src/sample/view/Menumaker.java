@@ -1,7 +1,7 @@
 package sample.view;
 
 public class Menumaker extends View {
-    private final String XML_FILE = "ressources/MenuMaker.fxml";
+    private final String XML_FILE = "ressources/fxml/MenuMaker.fxml";
 
     private final String LABEL = "MENUMAKER";
 

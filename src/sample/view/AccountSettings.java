@@ -1,7 +1,7 @@
 package sample.view;
 
 public class AccountSettings extends View {
-    private final String XML_FILE = "ressources/AccountSettings.fxml";
+    private final String XML_FILE = "ressources/fxml/AccountSettings.fxml";
 
     private final String LABEL = "SETTINGS";
 

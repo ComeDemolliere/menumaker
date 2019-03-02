@@ -72,8 +72,14 @@ public class DishCreationController extends Controller{
     }
 
     private void validateDish(){
+        //update fridge
+        FridgeController fridge = ((FridgeController) router.getController(Page.FRIDGE));
+        for (Ingredient ingredient: ingredientList){
+            fridge.addIngredient(ingredient);
+        }
+
         Receipe currentReceipe = new Receipe("default_dish.png", name.getText(),
-                receipe.getText(), ingredientList, false);
+                receipe.getText(), ingredientList, true);
 
         ((MealsController) router.getController(Page.MEALS)).addDishToFav(new DishComponent(currentReceipe));
         ((MenumakerController) router.getController(Page.MENUMAKER)).addDish(new DishComponent(currentReceipe));
