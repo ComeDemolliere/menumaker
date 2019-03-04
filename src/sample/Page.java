@@ -8,5 +8,6 @@ public enum Page {
     DISHCREATION,
     ADDGUEST,
     ACCOUNT,
-    DISHVALIDATION
+    DISHVALIDATION,
+    ADDPROFILE
 }

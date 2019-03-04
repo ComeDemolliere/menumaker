@@ -1,9 +1,9 @@
 package sample.view;
 
-public class AccountSettings extends View {
-    private final String XML_FILE = "ressources/fxml/AccountSettings.fxml";
+public class CreateProfile extends View {
+    private final String XML_FILE = "ressources/fxml/CreateProfile.fxml";
 
-    private final String LABEL = "CREATE PROFILE";
+    private final String LABEL = "SETTINGS";
 
     private final int WIDTH = 1280;
 

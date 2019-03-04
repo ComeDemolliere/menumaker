@@ -47,7 +47,7 @@
               </HBox.margin>
             <children>
                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :" />
-               <TextField promptText="Nom Profil">
+               <TextField fx:id="profileName" promptText="Nom Profil">
                   <VBox.margin>
                      <Insets bottom="30.0" />
                   </VBox.margin>
@@ -55,12 +55,13 @@
                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="N'aime pas :" />
                <HBox prefHeight="100.0" prefWidth="200.0">
                   <children>
-                     <TextField promptText="Ingrédient">
+                     <TextField fx:id="ingredient" promptText="Ingrédient">
                         <HBox.margin>
                            <Insets right="30.0" />
                         </HBox.margin>
                      </TextField>
-                     <Button mnemonicParsing="false" text="add" />
+                     <Button fx:id="addIngredientButton" mnemonicParsing="false" text="add" />
+                     <Button fx:id="removeIngredientButton" mnemonicParsing="false" text="remove" />
                   </children>
                   <opaqueInsets>
                      <Insets />
@@ -69,12 +70,12 @@
                      <Insets bottom="30.0" />
                   </VBox.margin>
                </HBox>
-               <ListView prefHeight="200.0" prefWidth="200.0">
+               <ListView fx:id="listIngredient" prefHeight="200.0" prefWidth="200.0">
                   <VBox.margin>
                      <Insets bottom="30.0" />
                   </VBox.margin>
                </ListView>
-               <Button mnemonicParsing="false" text="Ajouter Profil">
+               <Button fx:id="addProfileButton" mnemonicParsing="false" text="Ajouter Profil">
                   <VBox.margin>
                      <Insets bottom="10.0" />
                   </VBox.margin>

@@ -53,7 +53,7 @@ public class Router {
         addRoute(Page.DISHCREATION, new DishCreationController(), new DishCreation());
         addRoute(Page.ADDGUEST, new AddGuestController(), new AddGuest() );
         addRoute(Page.DISHVALIDATION, new DishValidationController(), new DishValidationView());
-
+        addRoute(Page.ADDPROFILE, new CreateProfileController(), new CreateProfile());
         //load principal page
         change(Page.MENUMAKER);
     }

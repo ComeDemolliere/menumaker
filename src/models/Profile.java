@@ -7,8 +7,11 @@ public class Profile {
     private String name;
     private List<Ingredient> ingredientsNotGood;
 
-    public Profile(String name) {
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public Profile() {
         ingredientsNotGood = new ArrayList<>();
     }
 

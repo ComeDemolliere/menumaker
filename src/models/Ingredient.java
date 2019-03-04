@@ -3,6 +3,14 @@ package models;
 public class Ingredient {
 
     private String title;
+
+    @Override
+    public String toString() {
+        return "Ingredient{" +
+                "title='" + title + '\'' +
+                '}';
+    }
+
     private int amount;
 
     public Ingredient(String title, int amount){
