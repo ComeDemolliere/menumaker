@@ -20,7 +20,6 @@ public abstract class Component {
             e.printStackTrace();
         }
 
-        System.out.println(parent);
     }
 
     public abstract BorderPane getBorderPane();

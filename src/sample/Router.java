@@ -70,8 +70,6 @@ public class Router {
 
         Controller currentController = controllerRoutes.get(route);
         View view = viewRoutes.get(route);
-        System.out.println(view.getLABEL() + " " + view.getClass());
-
         loader.setController(currentController);
 
         Parent parent = null;
@@ -80,6 +78,7 @@ public class Router {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
 
         currentController.init();
 
