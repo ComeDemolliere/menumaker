@@ -1,9 +1,8 @@
 package sample.controller;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import models.Ingredient;
 import models.Receipe;
@@ -44,6 +43,9 @@ public class DishCreationController extends Controller{
     @FXML
     private TextField quantity;
 
+    @FXML
+    private ChoiceBox choiceBox;
+
     public DishCreationController(){
         this.ingredientList = new ArrayList<>();
     }
@@ -55,10 +57,18 @@ public class DishCreationController extends Controller{
         createDish.setOnAction(actionEvent -> storeDish());
         validateDish.setOnAction(actionEvent -> validateDish());
         addIngredient.setOnAction(actionEvent -> addIngredient());
+
+        //update choiceBox
+        ArrayList<String> units = new ArrayList<>();
+        units.add("g");
+        units.add("cL");
+        units.add("unités");
+        ObservableList<String> list1 = FXCollections.observableArrayList(units);
+        choiceBox.setItems(list1);
     }
 
     private void addIngredient(){
-        IngredientComponent currentIngredient = new IngredientComponent(new Ingredient(ingredient.getText(), Integer.parseInt(quantity.getText())));
+        IngredientComponent currentIngredient = new IngredientComponent(new Ingredient(ingredient.getText(), Integer.parseInt(quantity.getText()),this.getSelectedUnit()));
 
         ingredientList.add(currentIngredient.getIngredient());
         ingredients.getItems().add(currentIngredient.getBorderPane());
@@ -86,5 +96,14 @@ public class DishCreationController extends Controller{
         ((MenumakerController) router.getController(Page.MENUMAKER)).addDish(new DishComponent(currentReceipe));
         ((MenumakerController) router.getController(Page.MENUMAKER)).updateMainPage();
         router.change(Page.MENUMAKER);
+    }
+    private String getSelectedUnit(){
+        String unit = (String) this.choiceBox.getValue();
+        if(unit == null || unit=="unités"){
+            unit = "";
+        }
+
+
+        return unit;
     }
 }

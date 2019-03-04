@@ -14,7 +14,8 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </Text>
-            <Text fx:id="quantity" strokeType="OUTSIDE" strokeWidth="0.0" text="Kg" />
+            <Text fx:id="quantity" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+            <Text fx:id="unit" strokeType="OUTSIDE" strokeWidth="0.0" text="Kg" />
          </children>
       </HBox>
    </center>

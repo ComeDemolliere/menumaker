@@ -5,31 +5,39 @@
   "ingredients": [
     {
       "title": "riz rond",
-      "amount": 1000
+      "amount": 1000,
+      "unit": "g"
     },
     {
       "title": "oignon",
-      "amount": 5
+      "amount": 5,
+      "unit": ""
+
     },
     {
       "title": "bouillon de légumes",
-      "amount": 3
+      "amount": 3,
+      "unit":""
     },
     {
       "title": "pâte",
-      "amount": 1000
+      "amount": 1000,
+      "unit": "g"
     },
     {
       "title": "parmesan",
-      "amount": 300
+      "amount": 300,
+      "unit": "g"
     },
     {
       "title": "beurre",
-      "amount": 250
+      "amount": 250,
+      "unit": "g"
     },
     {
       "title": "huilde d'olive",
-      "amount": 10
+      "amount": 10,
+      "unit": "cL"
     }
   ]
 }

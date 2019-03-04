@@ -7,23 +7,28 @@
       "ingredients": [
         {
           "title": "boeuf",
-          "amount": 400
+          "amount": 400,
+          "unit": "g"
         },
         {
           "title": "tomates",
-          "amount": 5
+          "amount": 5,
+          "unit": ""
         },
         {
           "title": "carotte",
-          "amount": 1
+          "amount": 1,
+          "unit": ""
         },
         {
           "title": "oignons",
-          "amount": 3
+          "amount": 3,
+          "unit": ""
         },
         {
           "title": "feuille de laurier",
-          "amount": 3
+          "amount": 3,
+          "unit": ""
         }
       ],
       "consumed": true
@@ -35,31 +40,38 @@
       "ingredients": [
         {
           "title": "riz rond",
-          "amount": 250
+          "amount": 250,
+          "unit": "g"
         },
         {
           "title": "oignon",
-          "amount": 1
+          "amount": 1,
+          "unit": ""
         },
         {
           "title": "bouillon de légumes",
-          "amount": 2
+          "amount": 2,
+          "unit": ""
         },
         {
           "title": "vin blanc",
-          "amount": 10
+          "amount": 10,
+          "unit": "cL"
         },
         {
           "title": "parmesan",
-          "amount": 80
+          "amount": 80,
+          "unit": "g"
         },
         {
           "title": "beurre",
-          "amount": 80
+          "amount": 80,
+          "unit": "g"
         },
         {
           "title": "huilde d'olive",
-          "amount": 2
+          "amount": 2,
+          "unit": "cL"
         }
       ],
       "consumed": true
@@ -71,27 +83,33 @@
       "ingredients": [
         {
           "title": "spaghettis",
-          "amount": 250
+          "amount": 250,
+          "unit": "g"
         },
         {
           "title": "oignon",
-          "amount": 1
+          "amount": 1,
+          "unit": ""
         },
         {
           "title": "lardons",
-          "amount": 350
+          "amount": 350,
+          "unit": "g"
         },
         {
           "title": "crème fraîche",
-          "amount": 30
+          "amount": 30,
+          "unit": "cL"
         },
         {
           "title": "jaunes d'oeufs",
-          "amount": 2
+          "amount": 2,
+          "unit": ""
         },
         {
           "title": "gruyère",
-          "amount": 75
+          "amount": 75,
+          "unit": "g"
         }
       ],
       "consumed": false

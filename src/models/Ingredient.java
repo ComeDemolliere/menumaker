@@ -12,10 +12,13 @@ public class Ingredient {
     }
 
     private int amount;
+    private String unit;
 
-    public Ingredient(String title, int amount){
+
+    public Ingredient(String title, int amount, String unit){
         this.title = title;
         this.amount = amount;
+        this.unit = unit;
     }
 
     public String getTitle(){
@@ -24,6 +27,10 @@ public class Ingredient {
 
     public int getAmount(){
         return this.amount;
+    }
+
+    public String getUnit(){
+        return this.unit;
     }
 
     public void increaseAmount(int amount) {

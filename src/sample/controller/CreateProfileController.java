@@ -46,7 +46,7 @@ public class CreateProfileController extends Controller {
     }
 
     private void addIngredient() {
-        Ingredient ingredient = new Ingredient(this.ingredient.getText(), 0);
+        Ingredient ingredient = new Ingredient(this.ingredient.getText(), 0,"");
         listIngredient.getItems().add(new IngredientComponent(ingredient).getBorderPane());
         profile.addIngredient(ingredient);
     }

@@ -19,6 +19,9 @@ public class IngredientComponent extends Component {
     @FXML
     private Text quantity;
 
+    @FXML
+    private Text unit;
+
     public IngredientComponent(Ingredient ingredient){
         this.load(new IngredientView());
 
@@ -30,12 +33,14 @@ public class IngredientComponent extends Component {
         return this.ingredient;
     }
 
+
     public void refresh(){
         this.name.setText(ingredient.getTitle());
         if (ingredient.getAmount() <= 0)
             this.quantity.setText("");
         else
             this.quantity.setText("" + ingredient.getAmount());
+        this.unit.setText(ingredient.getUnit());
     }
 
     @Override
