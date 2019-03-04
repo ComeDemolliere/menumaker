@@ -25,7 +25,7 @@ public class DishCreation extends View {
         return HEIGHT;
     }
 
-    private final String CSS_FILE = "sample/css/stylesheet.css";
+    private final String CSS_FILE = "sample/ressources/css/stylesheet.css";
 
     public String getCSS_FILE(){
         return CSS_FILE;

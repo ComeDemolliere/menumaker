@@ -3,7 +3,7 @@ package sample.view;
 public class Menumaker extends View {
     private final String XML_FILE = "ressources/fxml/MenuMaker.fxml";
 
-    private final String CSS_FILE = "sample/css/stylesheet.css";
+    private final String CSS_FILE = "sample/ressources/css/stylesheet.css";
 
     private final String LABEL = "MENUMAKER";
 

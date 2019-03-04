@@ -8,13 +8,18 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
+import models.Ingredient;
 import sample.Page;
 import sample.component.DishComponent;
 import sample.component.IngredientComponent;
 
+import java.util.List;
+import java.util.Random;
+
 public class MealFinderController extends Controller {
 
-    private DishComponent currentDish;
+    private int currentDish;
+    private List<DishComponent> dishes;
 
     @FXML
     private Button addMeal;
@@ -41,19 +46,53 @@ public class MealFinderController extends Controller {
     public void init(){
         super.init();
 
-        addMeal.setOnAction(actionEvent -> this.router.change(Page.FRIDGE));
+        //action events
+        addMeal.setOnAction(actionEvent -> this.validate());
+        right.setOnMouseClicked(event -> this.next());
+        left.setOnMouseClicked(mouseEvent -> this.prev());
 
-        if(currentDish != null){
-            image.setImage(new Image("sample/ressources/pictures/" + currentDish.getReceipe().getImage()));
-            name.setText(currentDish.getReceipe().getName());
-            receipe.setText(currentDish.getReceipe().getReceipe());
-            currentDish.getReceipe().getIngredients().forEach(i -> {
+        if(dishes != null){
+            image.setImage(new Image("sample/ressources/pictures/" + dishes.get(currentDish).getReceipe().getImage()));
+            name.setText(dishes.get(currentDish).getReceipe().getName());
+            receipe.setText(dishes.get(currentDish).getReceipe().getReceipe());
+            dishes.get(currentDish).getReceipe().getIngredients().forEach(i -> {
                 ingredients.getItems().add((new IngredientComponent(i)).getBorderPane());
             });
         }
     }
 
-    public void setCurrentDish(DishComponent dish){
-        this.currentDish = dish;
+    public void updateDishes(List<DishComponent> dishes){
+        this.dishes = dishes;
+
+        Random rand = new Random();
+        this.currentDish = rand.nextInt(dishes.size());
+    }
+
+    private void validate(){
+        //update fridge
+        FridgeController fridge = ((FridgeController) router.getController(Page.FRIDGE));
+        for (Ingredient ingredient: dishes.get(currentDish).getReceipe().getIngredients()){
+            fridge.addIngredient(ingredient);
+        }
+
+        ((MenumakerController) router.getController(Page.MENUMAKER)).addDish(new DishComponent(dishes.get(currentDish).getReceipe()));
+        ((MenumakerController) router.getController(Page.MENUMAKER)).updateMainPage();
+        router.change(Page.MENUMAKER);
+    }
+
+    private void next(){
+        if(this.currentDish < dishes.size() - 1)
+            this.currentDish += 1;
+        else
+            this.currentDish = 0;
+        this.init();
+    }
+
+    private void prev(){
+        if(this.currentDish > 0)
+            this.currentDish -= 1;
+        else
+            this.currentDish = dishes.size()-1;
+        this.init();
     }
 }

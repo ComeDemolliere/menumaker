@@ -70,12 +70,8 @@ public class MenumakerController extends Controller{
         //get all dishes
         List<DishComponent> dishes = meals.getAllDishes();
 
-        //choose randomly a dish
-        Random rand = new Random();
-        int alea = rand.nextInt(dishes.size());
-
         //update view
-        finder.setCurrentDish(new DishComponent(dishes.get(alea).getReceipe()));
+        finder.updateDishes(dishes);
         this.router.change(Page.MEALFINDER);
 
     }
