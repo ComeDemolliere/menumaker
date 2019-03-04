@@ -3,7 +3,7 @@ package sample.view;
 public class AccountSettings extends View {
     private final String XML_FILE = "ressources/fxml/AccountSettings.fxml";
 
-    private final String LABEL = "SETTINGS";
+    private final String LABEL = "CREATE PROFILE";
 
     private final int WIDTH = 1280;
 

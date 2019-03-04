@@ -71,6 +71,12 @@ public class MealsController extends Controller {
         viewDishSug.setOnAction(actionEvent -> validateDishSug());
     }
 
+    public List<DishComponent> getAllDishes(){
+        List<DishComponent> res = new ArrayList<>(this.dishesfav);
+        res.addAll(this.dishesSug);
+        return res;
+    }
+
     public void addDishToSug(DishComponent dishComponent){
         dishesSug.add(0, dishComponent);
     }

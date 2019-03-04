@@ -53,7 +53,7 @@ public class Router {
         addRoute(Page.DISHCREATION, new DishCreationController(), new DishCreation());
         addRoute(Page.ADDGUEST, new AddGuestController(), new AddGuest() );
         addRoute(Page.DISHVALIDATION, new DishValidationController(), new DishValidationView());
-
+        addRoute(Page.ADDPROFILE, new CreateProfileController(), new CreateProfile());
         //load principal page
         change(Page.MENUMAKER);
     }
@@ -70,8 +70,6 @@ public class Router {
 
         Controller currentController = controllerRoutes.get(route);
         View view = viewRoutes.get(route);
-        System.out.println(view.getLABEL() + " " + view.getClass());
-
         loader.setController(currentController);
 
         Parent parent = null;
@@ -81,6 +79,7 @@ public class Router {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
 
         currentController.init();
 

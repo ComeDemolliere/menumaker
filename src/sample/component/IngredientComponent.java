@@ -32,11 +32,15 @@ public class IngredientComponent extends Component {
 
     public void refresh(){
         this.name.setText(ingredient.getTitle());
-        this.quantity.setText("" + ingredient.getAmount());
+        if (ingredient.getAmount() <= 0)
+            this.quantity.setText("");
+        else
+            this.quantity.setText("" + ingredient.getAmount());
     }
 
     @Override
     public BorderPane getBorderPane() {
         return this.ingredientPanel;
     }
+
 }

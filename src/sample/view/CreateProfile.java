@@ -1,9 +1,9 @@
 package sample.view;
 
-public class AddGuest extends View {
-    private final String XML_FILE = "ressources/fxml/SelectNotToEatIngredient.fxml";
+public class CreateProfile extends View {
+    private final String XML_FILE = "ressources/fxml/CreateProfile.fxml";
 
-    private final String LABEL = "ADDGUEST";
+    private final String LABEL = "SETTINGS";
 
     private final int WIDTH = 1280;
 
@@ -21,12 +21,6 @@ public class AddGuest extends View {
 
     public int getHEIGHT() {
         return HEIGHT;
-    }
-
-    private final String CSS_FILE = "sample/css/stylesheet.css";
-
-    public String getCSS_FILE(){
-        return CSS_FILE;
     }
 
     private final int HEIGHT = 720;

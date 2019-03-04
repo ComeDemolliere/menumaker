@@ -3,7 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -44,113 +44,56 @@
                <children>
                   <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                      <children>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="image" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="/sample/ressources/pictures/turkey.png" />
                            </image>
                         </ImageView>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="- 4 personnes +" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Plat principal">
-                           <VBox.margin>
-                              <Insets top="5.0" />
-                           </VBox.margin>
-                        </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="45 mn">
-                           <VBox.margin>
-                              <Insets top="5.0" />
-                           </VBox.margin>
-                        </Text>
-                        <ImageView fitHeight="45.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="/sample/ressources/pictures/left-arrow.png" />
-                           </image>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="30.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Button mnemonicParsing="false" text="-">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+                              <Button mnemonicParsing="false" text="+">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
                            <VBox.margin>
                               <Insets top="20.0" />
                            </VBox.margin>
-                        </ImageView>
-                        <Button mnemonicParsing="false" text="Précédent">
-                           <VBox.margin>
-                              <Insets top="10.0" />
-                           </VBox.margin>
-                        </Button>
-                        <TextArea maxHeight="150.0" maxWidth="150.0" prefHeight="150.0" prefWidth="200.0" text="Mes profils">
-                           <VBox.margin>
-                              <Insets top="30.0" />
-                           </VBox.margin>
-                        </TextArea>
+                        </HBox>
                      </children>
                      <HBox.margin>
                         <Insets left="20.0" right="50.0" />
                      </HBox.margin>
                   </VBox>
-                  <VBox>
+                  <VBox alignment="TOP_CENTER" HBox.hgrow="ALWAYS">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Boeuf bourguignon">
+                        <Text fx:id="name" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom">
                            <font>
                               <Font size="27.0" />
                            </font>
-                        </Text>
-                        <HBox maxHeight="100.0" maxWidth="200.0" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <VBox prefHeight="200.0" prefWidth="300.0">
-                                 <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrédients">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Text>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Boeuf 800g">
-                                       <VBox.margin>
-                                          <Insets top="10.0" />
-                                       </VBox.margin>
-                                    </Text>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lardons 100g">
-                                       <VBox.margin>
-                                          <Insets top="10.0" />
-                                       </VBox.margin>
-                                    </Text>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Beurre 50g">
-                                       <VBox.margin>
-                                          <Insets top="10.0" />
-                                       </VBox.margin>
-                                    </Text>
-                                 </children>
-                              </VBox>
-                              <ScrollBar orientation="VERTICAL" />
-                           </children>
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
                            <VBox.margin>
-                              <Insets top="30.0" />
+                              <Insets bottom="30.0" />
                            </VBox.margin>
-                        </HBox>
-                        <TextArea maxHeight="150.0" maxWidth="200.0" prefHeight="150.0" prefWidth="200.0" text="Recette :&#10;&#10;############&#10;########&#10;&#10;&#10;########&#10;##########">
+                        </Text>
+                        <Text fill="#686262" strokeType="OUTSIDE" strokeWidth="0.0" text="Recette" />
+                        <TextArea fx:id="receipe" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" VBox.vgrow="ALWAYS">
                            <VBox.margin>
-                              <Insets top="50.0" />
+                              <Insets bottom="20.0" />
                            </VBox.margin>
                         </TextArea>
+                        <Text fill="#686262" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrédients" />
+                        <ListView fx:id="ingredients" maxHeight="200.0" maxWidth="400.0" prefHeight="200.0" prefWidth="200.0" />
                      </children>
                      <HBox.margin>
-                        <Insets right="50.0" top="60.0" />
+                        <Insets right="50.0" />
                      </HBox.margin>
-                  </VBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <ImageView fitHeight="50.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="/sample/ressources/pictures/right-arrow.png" />
-                           </image>
-                           <VBox.margin>
-                              <Insets top="20.0" />
-                           </VBox.margin>
-                        </ImageView>
-                        <Button mnemonicParsing="false" text="Suivant">
-                           <VBox.margin>
-                              <Insets top="5.0" />
-                           </VBox.margin>
-                        </Button>
-                     </children>
                   </VBox>
                </children>
             </HBox>
@@ -169,4 +112,26 @@
          </children>
       </VBox>
    </center>
+   <left>
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="45.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/sample/ressources/pictures/left-arrow.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </left>
+   <right>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="45.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/sample/ressources/pictures/right-arrow.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </right>
 </BorderPane>
