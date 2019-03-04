@@ -77,6 +77,7 @@ public class Router {
         Parent parent = null;
         try {
             parent = loader.load(getClass().getResourceAsStream(view.getXML_FILE()));
+            parent.getStylesheets().add(view.getCSS_FILE());
         } catch (IOException e) {
             e.printStackTrace();
         }

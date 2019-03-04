@@ -21,6 +21,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         Router router = new Router(primaryStage);
         router.init();
+        router.change(Page.MENUMAKER);
+
     }
 
 

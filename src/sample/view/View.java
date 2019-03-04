@@ -5,4 +5,5 @@ public abstract class View {
     public abstract String getLABEL();
     public abstract int getWIDTH();
     public abstract int getHEIGHT();
+    public abstract String getCSS_FILE();
 }

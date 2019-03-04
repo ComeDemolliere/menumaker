@@ -5,6 +5,8 @@ public class DishCreation extends View {
 
     private final String LABEL = "DISHCREATION";
 
+
+
     private final int WIDTH = 1280;
 
     public String getXML_FILE() {
@@ -21,6 +23,12 @@ public class DishCreation extends View {
 
     public int getHEIGHT() {
         return HEIGHT;
+    }
+
+    private final String CSS_FILE = "sample/css/stylesheet.css";
+
+    public String getCSS_FILE(){
+        return CSS_FILE;
     }
 
     private final int HEIGHT = 720;

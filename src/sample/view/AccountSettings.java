@@ -23,5 +23,10 @@ public class AccountSettings extends View {
         return HEIGHT;
     }
 
+    private final String CSS_FILE = "sample/css/stylesheet.css";
+
+    public String getCSS_FILE(){
+        return CSS_FILE;
+    }
     private final int HEIGHT = 720;
 }
