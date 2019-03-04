@@ -8,9 +8,11 @@ import javafx.scene.text.Text;
 import models.Receipe;
 import sample.Page;
 import sample.component.DishComponent;
+import sample.view.MealFinder;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 
 public class MenumakerController extends Controller{
@@ -50,7 +52,7 @@ public class MenumakerController extends Controller{
 
         //init bottom button
         starter.setOnAction(actionEvent -> this.router.change(Page.MEALFINDER));
-        mainCourse.setOnAction(actionEvent -> this.router.change(Page.MEALFINDER));
+        mainCourse.setOnAction(actionEvent -> chooseDishForMe());
         desert.setOnAction(actionEvent -> this.router.change(Page.MEALFINDER));
         dishes.forEach(d -> mealList.getItems().add(0, d.getBorderPane()));
 
@@ -58,6 +60,23 @@ public class MenumakerController extends Controller{
         if(isUpdate) info.setVisible(true);
         else info.setVisible(false);
         isUpdate = false;
+
+    }
+
+    private void chooseDishForMe(){
+        MealFinderController finder = (MealFinderController) router.getController(Page.MEALFINDER);
+        MealsController meals = (MealsController) router.getController(Page.MEALS);
+
+        //get all dishes
+        List<DishComponent> dishes = meals.getAllDishes();
+
+        //choose randomly a dish
+        Random rand = new Random();
+        int alea = rand.nextInt(dishes.size());
+
+        //update view
+        finder.setCurrentDish(new DishComponent(dishes.get(alea).getReceipe()));
+        this.router.change(Page.MEALFINDER);
 
     }
 
