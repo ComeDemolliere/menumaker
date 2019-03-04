@@ -3,6 +3,7 @@ package sample.controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -24,7 +25,7 @@ public class DishValidationController extends Controller {
     private Text name;
 
     @FXML
-    private Text receipeText;
+    private TextArea receipeText;
 
     @FXML
     private ListView<BorderPane> ingredients;

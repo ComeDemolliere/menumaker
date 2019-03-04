@@ -37,3 +37,7 @@
 #user:hover{
     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 5,0,0,1 );
 }
+
+.list-view .scroll-bar:vertical {
+    -fx-scale-x: 0;
+}
