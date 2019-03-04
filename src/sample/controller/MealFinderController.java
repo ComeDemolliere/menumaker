@@ -31,6 +31,12 @@ public class MealFinderController extends Controller {
     @FXML
     private ImageView image;
 
+    @FXML
+    private ImageView right;
+
+    @FXML
+    private ImageView left;
+
     @Override
     public void init(){
         super.init();
