@@ -1,25 +1,13 @@
 package sample.controller;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.stream.JsonReader;
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
-import javafx.scene.image.Image;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import models.Dishes;
-import models.Ingredient;
 import models.Receipe;
 import sample.Page;
 import sample.component.DishComponent;
-import sample.view.DishView;
-
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,6 +21,9 @@ public class MealsController extends Controller {
 
     @FXML
     private Button createReceipe;
+
+    @FXML
+    private TextField search;
 
     @FXML
     private ListView<BorderPane> fav;
@@ -69,6 +60,7 @@ public class MealsController extends Controller {
         dishesSug.forEach(d -> sug.getItems().add(d.getBorderPane()));
         viewDishFav.setOnAction(actionEvent -> validateDishfav());
         viewDishSug.setOnAction(actionEvent -> validateDishSug());
+        search.setOnKeyTyped(actionEvent -> this.search());
     }
 
     public List<DishComponent> getAllDishes(){
@@ -94,6 +86,21 @@ public class MealsController extends Controller {
             dishController.setReceipe(dishesfav.get(index).getReceipe());
             router.change(Page.DISHVALIDATION);
         }
+    }
+
+    private void search(){
+        String res = search.getText();
+        fav.getItems().clear();
+        sug.getItems().clear();
+
+        dishesfav.forEach(d -> {
+            if(d.getReceipe().getName().contains(res))
+                fav.getItems().add(d.getBorderPane());
+        });
+        dishesSug.forEach(d -> {
+            if(d.getReceipe().getName().contains(res))
+                sug.getItems().add(d.getBorderPane());
+        });
     }
 
     private void validateDishSug() {

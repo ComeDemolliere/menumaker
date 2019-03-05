@@ -8,6 +8,7 @@ import javafx.scene.text.Text;
 import models.Receipe;
 import sample.Page;
 import sample.component.DishComponent;
+import sample.component.DishWithDateComponent;
 import sample.view.MealFinder;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import java.util.Random;
 
 public class MenumakerController extends Controller{
 
-    private List<DishComponent> dishes;
+    private List<DishWithDateComponent> dishes;
     private boolean isUpdate;
 
     @FXML
@@ -36,13 +37,14 @@ public class MenumakerController extends Controller{
     private ListView<BorderPane> mealList;
 
 
+
     public MenumakerController(List<Receipe> receipes){
         dishes = new ArrayList<>();
         isUpdate = false;
 
         for (Receipe receipe: receipes) {
             if (receipe.isConsumed())
-                dishes.add(new DishComponent(receipe));
+                dishes.add(new DishWithDateComponent(receipe));
         }
     }
 
@@ -52,13 +54,23 @@ public class MenumakerController extends Controller{
 
         //init bottom button
         mainCourse.setOnAction(actionEvent -> chooseDishForMe());
-        dishes.forEach(d -> mealList.getItems().add(0, d.getBorderPane()));
+        dishes.forEach(d -> mealList.getItems().add(d.getBorderPane()));
+        mealList.setOnMouseClicked(mouseEvent -> shawMeal());
 
         //information
         if(isUpdate) info.setVisible(true);
         else info.setVisible(false);
         isUpdate = false;
 
+    }
+
+    private void shawMeal(){
+        DishValidationController dishController = (DishValidationController) this.router.getController(Page.DISHVALIDATION);
+        int currentIndex = mealList.getSelectionModel().getSelectedIndex();
+        if(currentIndex >= 0){
+            dishController.setReceipe(dishes.get(currentIndex).getReceipe());
+            router.change(Page.DISHVALIDATION);
+        }
     }
 
     private void chooseDishForMe(){
@@ -74,8 +86,8 @@ public class MenumakerController extends Controller{
 
     }
 
-    public void addDish(DishComponent dishComponent){
-        dishes.add(dishComponent);
+    public void addDish(DishWithDateComponent dishComponent){
+        dishes.add(0, dishComponent);
     }
 
     public void updateMainPage(){

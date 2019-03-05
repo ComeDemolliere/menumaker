@@ -11,6 +11,7 @@ import javafx.scene.text.Text;
 import models.Ingredient;
 import sample.Page;
 import sample.component.DishComponent;
+import sample.component.DishWithDateComponent;
 import sample.component.IngredientComponent;
 
 import java.util.List;
@@ -75,7 +76,7 @@ public class MealFinderController extends Controller {
             fridge.addIngredient(ingredient);
         }
 
-        ((MenumakerController) router.getController(Page.MENUMAKER)).addDish(new DishComponent(dishes.get(currentDish).getReceipe()));
+        ((MenumakerController) router.getController(Page.MENUMAKER)).addDish(new DishWithDateComponent(dishes.get(currentDish).getReceipe()));
         ((MenumakerController) router.getController(Page.MENUMAKER)).updateMainPage();
         router.change(Page.MENUMAKER);
     }

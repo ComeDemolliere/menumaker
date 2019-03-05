@@ -8,11 +8,14 @@ import models.Ingredient;
 import models.Receipe;
 import sample.Page;
 import sample.component.DishComponent;
+import sample.component.DishWithDateComponent;
 import sample.component.IngredientComponent;
 import sample.view.DishCreation;
 import sample.view.Meals;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class DishCreationController extends Controller{
@@ -75,8 +78,10 @@ public class DishCreationController extends Controller{
     }
 
     private void storeDish(){
+        Date date = new Date();
+
         Receipe currentReceipe = new Receipe("default_dish.png", name.getText(),
-                receipe.getText(), ingredientList, false);
+                receipe.getText(), ingredientList, false, new SimpleDateFormat("dd-MM-yyyy").format(date));
 
         ((MealsController) router.getController(Page.MEALS)).addDishToSug(new DishComponent(currentReceipe));
         router.change(Page.MEALS);
@@ -89,11 +94,13 @@ public class DishCreationController extends Controller{
             fridge.addIngredient(ingredient);
         }
 
+        Date date = new Date();
+
         Receipe currentReceipe = new Receipe("default_dish.png", name.getText(),
-                receipe.getText(), ingredientList, true);
+                receipe.getText(), ingredientList, true, new SimpleDateFormat("dd-MM-yyyy").format(date));
 
         ((MealsController) router.getController(Page.MEALS)).addDishToFav(new DishComponent(currentReceipe));
-        ((MenumakerController) router.getController(Page.MENUMAKER)).addDish(new DishComponent(currentReceipe));
+        ((MenumakerController) router.getController(Page.MENUMAKER)).addDish(new DishWithDateComponent(currentReceipe));
         ((MenumakerController) router.getController(Page.MENUMAKER)).updateMainPage();
         router.change(Page.MENUMAKER);
     }

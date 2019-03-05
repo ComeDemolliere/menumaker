@@ -1,9 +1,9 @@
 package sample.view;
 
-public class DishView extends View {
-    private final String XML_FILE = "ressources/fxml/DishWithIngredients.fxml";
+public class DishWithDateView extends View {
+    private final String XML_FILE = "ressources/fxml/Dish.fxml";
 
-    private final String LABEL = "DISHING";
+    private final String LABEL = "DISH";
 
     private final int WIDTH = 1280;
 
@@ -31,4 +31,3 @@ public class DishView extends View {
 
     private final int HEIGHT = 720;
 }
-

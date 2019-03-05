@@ -12,6 +12,7 @@ import models.Ingredient;
 import models.Receipe;
 import sample.Page;
 import sample.component.DishComponent;
+import sample.component.DishWithDateComponent;
 import sample.component.IngredientComponent;
 
 public class DishValidationController extends Controller {
@@ -59,7 +60,7 @@ public class DishValidationController extends Controller {
             fridge.addIngredient(ingredient);
         }
 
-        ((MenumakerController) router.getController(Page.MENUMAKER)).addDish(new DishComponent(receipe));
+        ((MenumakerController) router.getController(Page.MENUMAKER)).addDish(new DishWithDateComponent(receipe));
         ((MenumakerController) router.getController(Page.MENUMAKER)).updateMainPage();
         router.change(Page.MENUMAKER);
     }

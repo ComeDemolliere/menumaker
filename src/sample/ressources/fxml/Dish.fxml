@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
@@ -25,19 +24,17 @@
                         <Insets bottom="10.0" />
                      </VBox.margin>
                      <font>
-                        <Font size="16.0" />
+                        <Font size="25.0" />
                      </font>
                   </Text>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Text fill="#6f6e6e" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrédients">
+                        <Text fx:id="date" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
                            <font>
-                              <Font size="10.0" />
+                              <Font size="18.0" />
                            </font></Text>
                      </children>
                   </HBox>
-                  <ListView fx:id="ingredients" prefHeight="230.0" prefWidth="190.0">
-                  </ListView>
                </children>
                <HBox.margin>
                   <Insets left="10.0" />

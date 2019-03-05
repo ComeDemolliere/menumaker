@@ -31,7 +31,8 @@
           "unit": ""
         }
       ],
-      "consumed": true
+      "consumed": true,
+      "date": "10-03-2019"
     },
     {
       "file_image": "risotto.jpg",
@@ -74,7 +75,8 @@
           "unit": "cL"
         }
       ],
-      "consumed": true
+      "consumed": true,
+      "date": "9-03-2019"
     },
     {
       "file_image": "carbonara.jpg",
@@ -112,7 +114,8 @@
           "unit": "g"
         }
       ],
-      "consumed": false
+      "consumed": false,
+      "date": ""
     }
   ]
 }
