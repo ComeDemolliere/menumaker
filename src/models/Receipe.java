@@ -40,6 +40,10 @@ public class Receipe {
         return this.consumed;
     }
 
+    public void setDate(String date){
+        this.date = date;
+    }
+
     public String getDate(){
         return this.date;
     }

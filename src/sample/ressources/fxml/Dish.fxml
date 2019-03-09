@@ -10,7 +10,7 @@
 
 <BorderPane fx:id="dish" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <center>
-      <HBox maxHeight="120.0" maxWidth="400.0" prefHeight="120.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+      <HBox fx:id="eaten" maxHeight="120.0" maxWidth="400.0" prefHeight="120.0" prefWidth="400.0" BorderPane.alignment="CENTER">
          <children>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>

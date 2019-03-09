@@ -49,6 +49,9 @@ public class DishCreationController extends Controller{
     @FXML
     private ChoiceBox choiceBox;
 
+    @FXML
+    private TextField currentDate;
+
     public DishCreationController(){
         this.ingredientList = new ArrayList<>();
     }
@@ -60,6 +63,10 @@ public class DishCreationController extends Controller{
         createDish.setOnAction(actionEvent -> storeDish());
         validateDish.setOnAction(actionEvent -> validateDish());
         addIngredient.setOnAction(actionEvent -> addIngredient());
+
+        //date management
+        Date date = new Date();
+        currentDate.setText(new SimpleDateFormat("dd/MM/yyyy").format(date));
 
         //update choiceBox
         ArrayList<String> units = new ArrayList<>();
@@ -78,10 +85,8 @@ public class DishCreationController extends Controller{
     }
 
     private void storeDish(){
-        Date date = new Date();
-
         Receipe currentReceipe = new Receipe("default_dish.png", name.getText(),
-                receipe.getText(), ingredientList, false, new SimpleDateFormat("dd-MM-yyyy").format(date));
+                receipe.getText(), ingredientList, false, "");
 
         ((MealsController) router.getController(Page.MEALS)).addDishToSug(new DishComponent(currentReceipe));
         router.change(Page.MEALS);
@@ -94,10 +99,8 @@ public class DishCreationController extends Controller{
             fridge.addIngredient(ingredient);
         }
 
-        Date date = new Date();
-
         Receipe currentReceipe = new Receipe("default_dish.png", name.getText(),
-                receipe.getText(), ingredientList, true, new SimpleDateFormat("dd-MM-yyyy").format(date));
+                receipe.getText(), ingredientList, true, currentDate.getText());
 
         ((MealsController) router.getController(Page.MEALS)).addDishToFav(new DishComponent(currentReceipe));
         ((MenumakerController) router.getController(Page.MENUMAKER)).addDish(new DishWithDateComponent(currentReceipe));

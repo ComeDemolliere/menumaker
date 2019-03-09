@@ -94,11 +94,11 @@ public class MealsController extends Controller {
         sug.getItems().clear();
 
         dishesfav.forEach(d -> {
-            if(d.getReceipe().getName().contains(res))
+            if(d.getReceipe().getName().toLowerCase().contains(res.toLowerCase()))
                 fav.getItems().add(d.getBorderPane());
         });
         dishesSug.forEach(d -> {
-            if(d.getReceipe().getName().contains(res))
+            if(d.getReceipe().getName().toLowerCase().contains(res.toLowerCase()))
                 sug.getItems().add(d.getBorderPane());
         });
     }

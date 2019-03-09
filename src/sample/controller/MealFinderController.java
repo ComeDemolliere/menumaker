@@ -14,6 +14,8 @@ import sample.component.DishComponent;
 import sample.component.DishWithDateComponent;
 import sample.component.IngredientComponent;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
@@ -75,6 +77,9 @@ public class MealFinderController extends Controller {
         for (Ingredient ingredient: dishes.get(currentDish).getReceipe().getIngredients()){
             fridge.addIngredient(ingredient);
         }
+
+        Date date = new Date();
+        dishes.get(currentDish).getReceipe().setDate(new SimpleDateFormat("dd/MM/yyyy").format(date));
 
         ((MenumakerController) router.getController(Page.MENUMAKER)).addDish(new DishWithDateComponent(dishes.get(currentDish).getReceipe()));
         ((MenumakerController) router.getController(Page.MENUMAKER)).updateMainPage();
