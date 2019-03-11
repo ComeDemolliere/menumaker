@@ -28,6 +28,5 @@ public class Main extends Application {
 
     public static void main(String[] args) throws FileNotFoundException {
         launch(args);
-        System.out.println("Page close");
     }
 }

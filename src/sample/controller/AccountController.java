@@ -9,6 +9,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import models.Profile;
 import sample.Page;
+import sample.view.AddGuest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +36,9 @@ public class AccountController extends Controller {
         this.profilesList.add(profile);
         ObservableList<Profile> bo = FXCollections.observableArrayList(profilesList);
         this.profiles.setItems(bo);
+
+        AddGuestController controller = (AddGuestController) router.getController(Page.ADDGUEST);
+        controller.addProfiles(profile);
         //this.profiles.getItems().add(profile.getName());
     }
 
