@@ -1,37 +1,37 @@
 .root
 {
     -fx-font-family: "Arial Narrow";
-    -fx-background-color: #F2FBEF;
+    -fx-background-color: #DBDCDD;
 }
 
 #menumaker{
-    -fx-background-color: #64FE2E;
+    -fx-background-color: #A7ADBA;
     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 5,0,0,1 );
     -fx-font-size: 20px;
 }
 
 #menumaker:hover{
-    -fx-background-color: #3ADF00;
+    -fx-background-color: #969BA7;
 }
 
 #fridge{
-    -fx-background-color: #64FE2E;
+    -fx-background-color: #A7ADBA;
     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 5,0,0,1 );
     -fx-font-size: 20px;
 }
 
 #fridge:hover{
-    -fx-background-color: #3ADF00;
+    -fx-background-color: #969BA7;
 }
 
 #meals{
-    -fx-background-color: #64FE2E;
+    -fx-background-color: #A7ADBA;
     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 5,0,0,1 );
     -fx-font-size: 20px;
 }
 
 #meals:hover{
-    -fx-background-color: #3ADF00;
+    -fx-background-color: #969BA7;
 }
 
 #user:hover{
