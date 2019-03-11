@@ -7,6 +7,11 @@ public class Profile {
     private String name;
     private List<Ingredient> ingredientsNotGood;
 
+    @Override
+    public String toString() {
+        return name;
+    }
+
     public void setName(String name) {
         this.name = name;
     }

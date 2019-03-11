@@ -60,8 +60,6 @@
                            <Insets right="30.0" />
                         </HBox.margin>
                      </TextField>
-                     <Button fx:id="addIngredientButton" mnemonicParsing="false" text="add" />
-                     <Button fx:id="removeIngredientButton" mnemonicParsing="false" text="remove" />
                   </children>
                   <opaqueInsets>
                      <Insets />
@@ -70,6 +68,15 @@
                      <Insets bottom="30.0" />
                   </VBox.margin>
                </HBox>
+               <Button fx:id="addIngredientButton" mnemonicParsing="false" text="Ajouter">
+                  <VBox.margin>
+                     <Insets bottom="10.0" top="10.0" />
+                  </VBox.margin>
+               </Button>
+               <Button fx:id="removeIngredientButton" mnemonicParsing="false" text="Supprimer">
+                  <VBox.margin>
+                     <Insets bottom="10.0" top="10.0" />
+                  </VBox.margin></Button>
                <ListView fx:id="listIngredient" prefHeight="200.0" prefWidth="200.0">
                   <VBox.margin>
                      <Insets bottom="30.0" />
