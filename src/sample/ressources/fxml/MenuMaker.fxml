@@ -27,7 +27,7 @@
                   <Insets right="20.0" />
                </HBox.margin>
             </ImageView>
-            <Button fx:id="fridge" cacheShape="false" centerShape="false" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" text="MON FRIGO" HBox.hgrow="ALWAYS" />
+            <Button fx:id="fridge" cacheShape="false" centerShape="false" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" text="MES PROVISIONS" HBox.hgrow="ALWAYS" />
             <Button fx:id="menumaker" defaultButton="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="MENUMAKER" HBox.hgrow="ALWAYS" />
             <Button fx:id="meals" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="PLATS" HBox.hgrow="ALWAYS" />
          </children>
@@ -58,7 +58,7 @@
                   <Insets bottom="30.0" />
                </VBox.margin>
             </ListView>
-            <Text fx:id="info" fill="#e87676" strokeType="OUTSIDE" strokeWidth="0.0" text="Votre frigo et votre listes de courses ont été mis à jour">
+            <Text fx:id="info" fill="#e87676" strokeType="OUTSIDE" strokeWidth="0.0" text="Vos provisions et votre liste de courses ont été mises à jour">
                <font>
                   <Font size="16.0" />
                </font>
