@@ -55,9 +55,9 @@ public class DishWithDateComponent extends Component {
         } catch (ParseException e) { e.printStackTrace(); }
 
         int comparator = today.compareTo(receipeDate);
-        if(comparator == 0) dish.setStyle("-fx-background-color: #BEF781");
+        if(comparator == 0) dish.setStyle("-fx-background-color: #404E96");
         else if (comparator > 0) dish.setStyle("-fx-background-color: #E6E6E6");
-        else dish.setStyle("-fx-background-color: #F3F781");
+        else dish.setStyle("-fx-background-color: #939BC4");
     }
 
     @Override
