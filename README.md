@@ -1,5 +1,5 @@
 # MENUMAKER
-menumaker is an IHM project develop in Javafx
+menumaker is an IHM project developped in Javafx
 
 
 ## Outbuildings
